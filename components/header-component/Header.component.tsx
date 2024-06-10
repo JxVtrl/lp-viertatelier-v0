@@ -1,7 +1,6 @@
 import React from "react";
-import { Logo, Navigation, Midia } from "@/components";
+import { Logo, Navigation, Midia, Hamburguer } from "@/components";
 import { useApp } from "@/context/AppContext";
-import { Menu } from "../menu-component";
 
 const Header: React.FC = () => {
   const {
@@ -29,7 +28,7 @@ const Header: React.FC = () => {
             justifyContent: "flex-start",
           }}
         >
-          <Menu />
+          <Hamburguer />
         </div>
       )}
       <div

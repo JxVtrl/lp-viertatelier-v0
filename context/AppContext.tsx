@@ -30,6 +30,8 @@ type ContextProps = {
       index: number;
     }>
   >;
+  menuOpen: boolean;
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const AppContext = createContext({} as ContextProps);
@@ -49,6 +51,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     collection: "yellow",
     index: 0,
   });
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const checkWidth = () => {
     setDevice({
@@ -68,8 +71,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("resize", checkWidth);
   }, []);
 
-  // if isdesktop, just change the collection. if ismobile, change the index to 1 before changing the collection (and reset the index). Make a interval to change the index(or collection) every 8 seconds
-
   const getNextCollection = (prevCollection: string) => {
     const collection =
       prevCollection === "yellow"
@@ -81,10 +82,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         : "yellow";
 
     return collection;
-  }
-
-
-
+  };
 
   useEffect(() => {
     if (device.isDesktop) {
@@ -118,8 +116,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setDevice,
       activeBackground,
       setActiveBackground,
+      menuOpen,
+      setMenuOpen,
     }),
-    [device, setDevice, activeBackground, setActiveBackground]
+    [
+      device,
+      setDevice,
+      activeBackground,
+      setActiveBackground,
+      menuOpen,
+      setMenuOpen,
+    ]
   );
 
   return (
