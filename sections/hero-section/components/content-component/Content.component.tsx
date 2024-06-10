@@ -1,9 +1,14 @@
 import { CTA } from "@/components";
+import { useApp } from "@/context/AppContext";
 import React from "react";
 
 const Content: React.FC = () => {
+  const {
+    device: { isDesktop },
+  } = useApp();
   return (
-    <div className="
+    <div
+      className="
       flex
       flex-col
       gap-y-[20px]
@@ -13,22 +18,32 @@ const Content: React.FC = () => {
       h-full
       justify-center
 
-    ">
-      <div className="
+    "
+    >
+      <div
+        className="
         flex
         flex-col
-        gap-y-[35px]
-      ">
-        <h1 className="
+        gap-y-[12px]
+        lg:gap-y-[35px]
+      "
+      >
+        <h1
+          className="
           text-[80px]
           tracking-[2px]
-        ">Atelier Sob Medida</h1>
+        "
+        >
+          Atelier Sob Medida
+        </h1>
 
-        <p className="
+        <p
+          className="
           text-[18px]
-        ">
-          Conheça nossa seleção de vestidos taylor made com design autoral e
-          único
+        "
+        >
+          Conheça nossa seleção de vestidos taylor{!isDesktop ? <br /> : " "}
+          made com design autoral e único
         </p>
       </div>
 
