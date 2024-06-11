@@ -82,7 +82,7 @@ export const collections_data = {
       },
     ],
     cta: {
-      text: "VER COLEÇÃO",
+      text: "QUERO VER",
       link: "/festas-viert",
     },
   },

@@ -4,12 +4,14 @@ type CTAProps = {
   text?: string;
   onClick?: () => void;
   variant?: "primary" | "secondary";
+  className?: string;
 };
 
 const CTA: React.FC<CTAProps> = ({
   onClick = () => null,
   text = "EU QUERO",
   variant = "primary",
+  className
 }) => {
   const primaryVariant = "text-white border border-white ";
 
@@ -27,6 +29,7 @@ const CTA: React.FC<CTAProps> = ({
       w-full
       mx-auto
       uppercase
+      ${className}
     `}
       onClick={onClick}
     >

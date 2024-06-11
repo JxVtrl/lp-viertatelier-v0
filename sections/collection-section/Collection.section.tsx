@@ -116,36 +116,65 @@ const Collection: React.FC = () => {
         <div className="
          grid 
           grid-cols-2
+          grid-rows-2
           gap-[16px]
-          pb-[7vh]
-        
+          mb-[5vh]
+          mt-[120px]
+          px-[24px]
         ">
-          <div>
-            <h2>{collections_data.festas_viert.title}</h2>
-            <p>{collections_data.festas_viert.description}</p>
+          <div className="
+            w-full
+            flex
+            flex-col
+            gap-[24px]
+          
+          " style={{
+            aspectRatio: 0.775,
+         
+          }}>
+            <div className="
+            w-[75%]
+
+            
+            ">{collections_data.festas_viert.title}</div>
+            <p className="text-[14px] text-black">{collections_data.festas_viert.description}</p>
 
             <CTA
               text={collections_data.festas_viert.cta.text}
+              variant="secondary"
+              className="w-[100%]"
               onClick={() => {
                 navigateTo(collections_data.festas_viert.cta.link);
               }}
             />
           </div>
-          <div className="relative">
+          <div className="relative" style={{
+            aspectRatio: 0.775,
+              width: "100%",
+            height: "100%"
+          }}>
             <Image
               layout="fill"
               src={collections_data.festas_viert.images[0].src}
               alt={collections_data.festas_viert.images[0].alt}
             />
           </div>
-          <div className="relative">
+          <div className="relative" style={{
+            aspectRatio: 0.775,
+              width: "100%",
+            height: "100%"
+          }}>
             <Image
               layout="fill"
               src={collections_data.festas_viert.images[1].src}
               alt={collections_data.festas_viert.images[1].alt}
             />
           </div>
-          <div className="relative">
+          <div className="relative" style={{
+            aspectRatio: 0.775,
+              width: "100%",
+            height: "100%"
+          }}>
             <Image
               layout="fill"
               src={collections_data.festas_viert.images[2].src}
@@ -155,13 +184,26 @@ const Collection: React.FC = () => {
         </div>
 
         {/* TAYLOR CALL */}
-        <div>
-          <p>{collections_data.taylor.description}</p>
+        <div className="
+          flex
+          flex-col
+          items-center
+          justify-center
+        ">
+          <p className="
+            text-black
+            text-center
+            max-w-[80%]
+            mx-auto
+            mb-[5vh]
+          
+          ">{collections_data.taylor.description}</p>
           <CTA
             text={collections_data.taylor.cta.text}
             onClick={() => {
               navigateTo(collections_data.taylor.cta.link);
             }}
+            variant="secondary"
           />
         </div>
       </>
