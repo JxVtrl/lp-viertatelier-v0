@@ -6,7 +6,9 @@ import Image from "next/image";
 const BGImage = ({ src, alt }: { src: string; alt: string }) => {
   return (
     <div className="relative w-full h-full">
-      <Image src={src} alt={alt} layout="fill" />
+      <Image src={src} alt={alt} layout="fill" style={{
+        objectFit: "cover",
+      }} />
     </div>
   );
 };
