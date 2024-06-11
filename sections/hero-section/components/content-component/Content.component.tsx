@@ -7,47 +7,17 @@ const Content: React.FC = () => {
     device: { isDesktop },
   } = useApp();
   return (
-    <div
-      className="
-      flex
-      flex-col
-      gap-y-[20px]
-      text-center
-      text-[#fff]
-      w-full
-      h-full
-      justify-center
+    <div className="flex flex-col gap-y-[20vh] lg:gap-y-[60px] text-center text-[#fff] w-full h-full justify-center">
+      <div className="flex flex-col gap-y-[12px] lg:gap-y-[0]">
+        <h1 className="text-[80px] tracking-[2px]">Atelier Sob Medida</h1>
 
-    "
-    >
-      <div
-        className="
-        flex
-        flex-col
-        gap-y-[12px]
-        lg:gap-y-[35px]
-      "
-      >
-        <h1
-          className="
-          text-[80px]
-          tracking-[2px]
-        "
-        >
-          Atelier Sob Medida
-        </h1>
-
-        <p
-          className="
-          text-[18px]
-        "
-        >
+        <p className="text-[18px]">
           Conheça nossa seleção de vestidos taylor{!isDesktop ? <br /> : " "}
           made com design autoral e único
         </p>
       </div>
 
-      <CTA />
+      <CTA onClick={() => null} />
     </div>
   );
 };
