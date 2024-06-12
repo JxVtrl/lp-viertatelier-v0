@@ -53,8 +53,7 @@ const Collection: React.FC = () => {
           >
             <div className="flex flex-col items-center">
               <div className="w-[40%]">
-
-              {collections_data.atelier_viert.title}
+                {collections_data.atelier_viert.title}
               </div>
               <p
                 className="
@@ -113,7 +112,8 @@ const Collection: React.FC = () => {
         </div>
 
         {/* FESTAS VIERT */}
-        <div className="
+        <div
+          className="
          grid 
           grid-cols-2
           grid-rows-2
@@ -121,23 +121,32 @@ const Collection: React.FC = () => {
           mb-[5vh]
           mt-[120px]
           px-[24px]
-        ">
-          <div className="
+        "
+        >
+          <div
+            className="
             w-full
             flex
             flex-col
             gap-[24px]
           
-          " style={{
-            aspectRatio: 0.775,
-         
-          }}>
-            <div className="
+          "
+            style={{
+              aspectRatio: 0.775,
+            }}
+          >
+            <div
+              className="
             w-[75%]
 
             
-            ">{collections_data.festas_viert.title}</div>
-            <p className="text-[14px] text-black">{collections_data.festas_viert.description}</p>
+            "
+            >
+              {collections_data.festas_viert.title}
+            </div>
+            <p className="text-[14px] text-black">
+              {collections_data.festas_viert.description}
+            </p>
 
             <CTA
               text={collections_data.festas_viert.cta.text}
@@ -148,33 +157,42 @@ const Collection: React.FC = () => {
               }}
             />
           </div>
-          <div className="relative" style={{
-            aspectRatio: 0.775,
+          <div
+            className="relative"
+            style={{
+              aspectRatio: 0.775,
               width: "100%",
-            height: "100%"
-          }}>
+              height: "100%",
+            }}
+          >
             <Image
               layout="fill"
               src={collections_data.festas_viert.images[0].src}
               alt={collections_data.festas_viert.images[0].alt}
             />
           </div>
-          <div className="relative" style={{
-            aspectRatio: 0.775,
+          <div
+            className="relative"
+            style={{
+              aspectRatio: 0.775,
               width: "100%",
-            height: "100%"
-          }}>
+              height: "100%",
+            }}
+          >
             <Image
               layout="fill"
               src={collections_data.festas_viert.images[1].src}
               alt={collections_data.festas_viert.images[1].alt}
             />
           </div>
-          <div className="relative" style={{
-            aspectRatio: 0.775,
+          <div
+            className="relative"
+            style={{
+              aspectRatio: 0.775,
               width: "100%",
-            height: "100%"
-          }}>
+              height: "100%",
+            }}
+          >
             <Image
               layout="fill"
               src={collections_data.festas_viert.images[2].src}
@@ -184,20 +202,26 @@ const Collection: React.FC = () => {
         </div>
 
         {/* TAYLOR CALL */}
-        <div className="
+        <div
+          className="
           flex
           flex-col
           items-center
           justify-center
-        ">
-          <p className="
+          pb-[7vh]
+        "
+        >
+          <p
+            className="
             text-black
             text-center
             max-w-[80%]
             mx-auto
             mb-[5vh]
-          
-          ">{collections_data.taylor.description}</p>
+          "
+          >
+            {collections_data.taylor.description}
+          </p>
           <CTA
             text={collections_data.taylor.cta.text}
             onClick={() => {
