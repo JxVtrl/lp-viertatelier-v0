@@ -15,7 +15,7 @@ const Header: React.FC = () => {
         w-full
         `}
       style={{
-        padding: "35px",
+        padding: "35px 55px",
         paddingRight: isDesktop ? "55px" : "35px",
         paddingBottom: "0",
       }}

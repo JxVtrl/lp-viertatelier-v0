@@ -6,6 +6,7 @@ const Content: React.FC = () => {
   const {
     device: { isDesktop },
   } = useApp();
+
   return (
     <div className="flex flex-col gap-y-[20vh] lg:gap-y-[60px] text-center text-[#fff] w-full h-full justify-center">
       <div className="flex flex-col gap-y-[12px] lg:gap-y-[0]">
