@@ -250,9 +250,9 @@ const Collection: React.FC = () => {
     desktop: (
       <>
         {/* ATELIER VIERT */}
-        <div className="h-[100vh] flex gap-[50px] py-[200px] px-[350px] text-black">
+        <div className="h-full flex gap-[50px] pt-[200px] px-[350px] text-black">
           <div className="">
-            <div className="relative flex-col h-[460px] gap-[70px]">
+            <div className="relative flex-col h-[580px] gap-[70px]">
               <Image
                 layout="fill"
                 className="object-center bg-cover w-[657px] h-full"
@@ -279,9 +279,9 @@ const Collection: React.FC = () => {
               <p>{collections_data.atelier_viert.description}</p>
             </div>
 
-            <div className="relative flex-col h-[460px]">
+            <div className="relative w-[320px] flex-col h-[450px]">
               <Image
-                className="object-center mt-[40px] bg-cover w-[657px] h-full"
+                className="object-center mt-[40px] bg-cover"
                 layout="fill"
                 src={collections_data.atelier_viert.images[1].src}
                 alt={collections_data.atelier_viert.images[1].alt}
