@@ -1,6 +1,7 @@
 import { CTA } from "@/components";
 import { useApp } from "@/context/AppContext";
 import React from "react";
+import localFont from "next/font/local";
 
 const Content: React.FC = () => {
   const {

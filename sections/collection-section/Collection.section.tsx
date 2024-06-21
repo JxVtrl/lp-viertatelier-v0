@@ -5,6 +5,12 @@ import { collections_data } from "@/data/collections-data";
 import Image from "next/image";
 import React from "react";
 
+import localFont from "next/font/local";
+
+const canelaFont = localFont({
+  src: "../../styles/fonts/canela/CanelaText-LightItalic-Trial.otf",
+});
+
 const Collection: React.FC = () => {
   const {
     device: { isDesktop },
@@ -244,30 +250,38 @@ const Collection: React.FC = () => {
     desktop: (
       <>
         {/* ATELIER VIERT */}
-        <div>
-          <div>
-            <div>
+        <div className="h-[100vh] flex gap-[50px] py-[200px] px-[350px] text-black">
+          <div className="">
+            <div className="relative flex-col h-[460px] gap-[70px]">
               <Image
                 layout="fill"
+                className="object-center bg-cover w-[657px] h-full"
                 src={collections_data.atelier_viert.images[0].src}
                 alt={collections_data.atelier_viert.images[0].alt}
               />
             </div>
             <CTA
               text={collections_data.atelier_viert.cta.text}
+              className="mt-[70px]"
+              variant="secondary"
               onClick={() => {
                 navigateTo(collections_data.atelier_viert.cta.link);
               }}
             />
           </div>
-          <div>
+          <div className="max-w-[500px] flex flex-col">
             <div>
-              <h1>{collections_data.atelier_viert.title}</h1>
+              <h1
+                className={`${canelaFont.className} text-[90px] w-full text-nowrap`}
+              >
+                {collections_data.atelier_viert.title}
+              </h1>
               <p>{collections_data.atelier_viert.description}</p>
             </div>
 
-            <div>
+            <div className="relative flex-col h-[460px]">
               <Image
+                className="object-center mt-[40px] bg-cover w-[657px] h-full"
                 layout="fill"
                 src={collections_data.atelier_viert.images[1].src}
                 alt={collections_data.atelier_viert.images[1].alt}
@@ -277,7 +291,7 @@ const Collection: React.FC = () => {
         </div>
 
         {/* NOIVAS VIERT */}
-        <div className="flex bg-[#EFEFE9]">
+        <div className="flex bg-[#EFEFE9] mt-[200px]">
           <div className="flex-1 relative">
             <Image
               layout="fill"
