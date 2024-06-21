@@ -25,7 +25,9 @@ const TitleDescriptionBtn: React.FC<TitleDescriptionBtnProps> = ({
 
   return (
     <>
-      <span className={`text-[90px]  font-thin  ${canelaFont.className}`}>
+      <span
+        className={`text-[90px] font-thin text-nowrap  ${canelaFont.className}`}
+      >
         {/* {collections_data.noivas_viert.title} */}
         {title}
       </span>
@@ -35,7 +37,7 @@ const TitleDescriptionBtn: React.FC<TitleDescriptionBtnProps> = ({
       </p>
       <CTA
         variant="secondary"
-        className="mt-[130px]"
+        className="mt-[80px]"
         // text={collections_data.noivas_viert.cta.text}
         text={btnText}
         onClick={() => {

@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="flex flex-col items-center justify-center text-black pt-[136px] font-normal bg-[#EFEFE9]">
       <div className={`flex flex-col items-center`}>
-        <div className={`text-[21px] ${inter.className}`}>
+        <div className={`text-[21px] uppercase ${inter.className}`}>
           {footer_data.followText}
         </div>
         <div className={`text-[44px] ${canelaFont.className}`}>

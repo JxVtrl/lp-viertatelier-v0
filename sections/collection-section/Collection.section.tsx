@@ -322,36 +322,44 @@ const Collection: React.FC = () => {
               />
             </div>
 
-            <div className="w-[20px]">
-              <Image
-                layout="fill"
-                className="object-center bg-cover"
-                src={collections_data.festas_viert.images[0].src}
-                alt={collections_data.festas_viert.images[0].alt}
-              />
-              <Image
-                layout="fill"
-                src={collections_data.festas_viert.images[1].src}
-                alt={collections_data.festas_viert.images[1].alt}
-              />
-            </div>
-          </div>
-          <div>
-            <div>
-              <Image
-                layout="fill"
-                src={collections_data.festas_viert.images[2].src}
-                alt={collections_data.festas_viert.images[2].alt}
-              />
+            <div className="flex relative gap-[37px] mt-[114px] h-[320px]">
+              <div className="bg-orange-800 w-[424px] p-2 relative">
+                <Image
+                  layout="fill"
+                  className="object-center relative w-full h-full bg-cover"
+                  src={collections_data.festas_viert.images[0].src}
+                  alt={collections_data.festas_viert.images[0].alt}
+                />
+              </div>
+              <div className="bg-orange-800 w-[424px] p-2 relative">
+                <Image
+                  layout="fill"
+                  className="object-center w-full h-full z-10 bg-cover"
+                  src={collections_data.festas_viert.images[1].src}
+                  alt={collections_data.festas_viert.images[1].alt}
+                />
+              </div>
+              <div className="absolute -top-[150%] right-0">
+                <div className="relative w-[424px] h-[653px] ">
+                  <Image
+                    layout="fill"
+                    className="object-center w-full h-full bg-cover "
+                    src={collections_data.festas_viert.images[2].src}
+                    alt={collections_data.festas_viert.images[2].alt}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         {/* TAYLOR CALL */}
-        <div>
-          <p>{collections_data.taylor.description}</p>
+        <div className="text-black mt-[320px]  flex flex-col gap-[82px] items-center justify-center">
+          <p className="text-[30px]">{collections_data.taylor.description}</p>
 
           <CTA
+            variant="secondary"
+            className="mb-[130px]"
             text={collections_data.taylor.cta.text}
             onClick={() => {
               navigateTo(collections_data.taylor.cta.link);
@@ -359,7 +367,7 @@ const Collection: React.FC = () => {
           />
         </div>
         {/* LAST PHOTO BEFORE FOOTER */}
-        <div className="relative h-[360px] w-screen">
+        <div className="relative h-[360px]  w-screen">
           <Image
             layout="fill"
             className="absolute h-full object-cover bg-center"
