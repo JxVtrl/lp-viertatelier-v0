@@ -1,4 +1,5 @@
 import { CTA } from "@/components";
+import TitleDescriptionBtn from "@/components/titledescriptionbtn-component/TitleDescriptionBtn.component";
 import { useApp } from "@/context/AppContext";
 import { collections_data } from "@/data/collections-data";
 import Image from "next/image";
@@ -208,7 +209,6 @@ const Collection: React.FC = () => {
           flex-col
           items-center
           justify-center
-          pb-[7vh]
         "
         >
           <p
@@ -230,7 +230,7 @@ const Collection: React.FC = () => {
             variant="secondary"
           />
           {/* LAST PHOTO BEFORE FOOTER */}
-          <div className="relative max-h-[360px] h-full my-[130px] bg-red-200 w-screen">
+          <div className="relative h-[360px] mt-[130px] w-screen">
             <Image
               layout="fill"
               className="absolute h-full object-cover bg-center"
@@ -277,43 +277,41 @@ const Collection: React.FC = () => {
         </div>
 
         {/* NOIVAS VIERT */}
-        <div>
-          <div>
+        <div className="flex bg-[#EFEFE9]">
+          <div className="flex-1 relative">
             <Image
               layout="fill"
+              className="object-center bg-cover absolute"
               src={collections_data.noivas_viert.images[0].src}
               alt={collections_data.noivas_viert.images[0].alt}
             />
           </div>
-          <div>
-            <h1>{collections_data.noivas_viert.title}</h1>
-            <p>{collections_data.noivas_viert.description}</p>
-            <CTA
-              text={collections_data.noivas_viert.cta.text}
-              onClick={() => {
-                navigateTo(collections_data.noivas_viert.cta.link);
-              }}
+          <div className="flex-1 py-[120px] pl-[55px] text-black">
+            <TitleDescriptionBtn
+              title={collections_data.noivas_viert.title}
+              description={collections_data.noivas_viert.description}
+              navigationLink={collections_data.noivas_viert.cta.link}
+              btnText={collections_data.noivas_viert.cta.text}
             />
           </div>
         </div>
-
         {/* FESTAS VIERT */}
-        <div>
-          <div>
+
+        <div className="h-[100vh] text-black px-[230px] py-[120px]">
+          <div className="">
             <div>
-              <h1>{collections_data.festas_viert.title}</h1>
-              <p>{collections_data.festas_viert.description}</p>
-              <CTA
-                text={collections_data.festas_viert.cta.text}
-                onClick={() => {
-                  navigateTo(collections_data.festas_viert.cta.link);
-                }}
+              <TitleDescriptionBtn
+                title={collections_data.festas_viert.title}
+                description={collections_data.festas_viert.description}
+                navigationLink={collections_data.festas_viert.cta.link}
+                btnText={collections_data.festas_viert.cta.text}
               />
             </div>
 
-            <div>
+            <div className="w-[20px]">
               <Image
                 layout="fill"
+                className="object-center bg-cover"
                 src={collections_data.festas_viert.images[0].src}
                 alt={collections_data.festas_viert.images[0].alt}
               />

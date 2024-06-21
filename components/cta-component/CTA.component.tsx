@@ -11,7 +11,7 @@ const CTA: React.FC<CTAProps> = ({
   onClick = () => null,
   text = "EU QUERO",
   variant = "primary",
-  className
+  className,
 }) => {
   const primaryVariant = "text-white border border-white ";
 
@@ -23,9 +23,9 @@ const CTA: React.FC<CTAProps> = ({
       ${variant === "primary" ? primaryVariant : secondaryVariant}
       font-bold py-2 px-4 rounded
       transition duration-300 ease-in-out
-      w-[60%]
+      max-w-[60%]
       lg:w-[350px]
-        h-[75px]
+      h-[75px]
       w-full
       mx-auto
       uppercase

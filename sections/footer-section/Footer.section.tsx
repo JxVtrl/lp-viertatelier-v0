@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 
 const canelaFont = localFont({
-  src: "../../styles/fonts/canela-regular/Canela-Regular.woff2",
+  src: "../../styles/fonts/canela/Canela-Regular.woff2",
 });
 // import Canela font from Google Fonts
 
