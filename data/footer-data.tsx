@@ -28,8 +28,9 @@ export const footer_data = {
       <u>MARQUE SUA VISITA</u>
     </p>
   ),
-  address: <p>R. Dos Oitis | Gávea | Rio de Janeiro</p>,
+  address: <p>R. Dos Oitis, 13 | Gávea | Rio de Janeiro</p>,
   businessHours: {
+    daysWorking: "Segunda a sexta",
     startWorking: "10",
     stopWorking: "19",
   },

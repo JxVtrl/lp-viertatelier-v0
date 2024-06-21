@@ -229,6 +229,15 @@ const Collection: React.FC = () => {
             }}
             variant="secondary"
           />
+          {/* LAST PHOTO BEFORE FOOTER */}
+          <div className="relative max-h-[360px] h-full my-[130px] bg-red-200 w-screen">
+            <Image
+              layout="fill"
+              className="absolute h-full object-cover bg-center"
+              src={collections_data.festas_viert.images[2].src}
+              alt={collections_data.festas_viert.images[2].alt}
+            />
+          </div>
         </div>
       </>
     ),
@@ -335,6 +344,15 @@ const Collection: React.FC = () => {
             onClick={() => {
               navigateTo(collections_data.taylor.cta.link);
             }}
+          />
+        </div>
+        {/* LAST PHOTO BEFORE FOOTER */}
+        <div className="relative h-[360px] w-screen">
+          <Image
+            layout="fill"
+            className="absolute h-full object-cover bg-center"
+            src={collections_data.festas_viert.images[2].src}
+            alt={collections_data.festas_viert.images[2].alt}
           />
         </div>
       </>
