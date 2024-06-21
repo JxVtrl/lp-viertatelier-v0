@@ -354,7 +354,7 @@ const Collection: React.FC = () => {
         </div>
 
         {/* TAYLOR CALL */}
-        <div className="text-black mt-[320px]  flex flex-col gap-[82px] items-center justify-center">
+        <div className="text-black mt-[490px]  flex flex-col gap-[82px] items-center justify-center">
           <p className="text-[30px]">{collections_data.taylor.description}</p>
 
           <CTA
