@@ -4,22 +4,22 @@ export const footer_data = {
   images: [
     {
       id: 0,
-      src: "https://img.freepik.com/premium-photo/full-frame-shot-gray-wall_1048944-30588139.jpg",
+      src: "/assets/images/first-footer-image.png",
       alt: "Instagram 1",
     },
     {
       id: 1,
-      src: "https://img.freepik.com/premium-photo/full-frame-shot-gray-wall_1048944-30588139.jpg",
+      src: "/assets/images/second-image-footer.png",
       alt: "Instagram 2",
     },
     {
       id: 2,
-      src: "https://img.freepik.com/premium-photo/full-frame-shot-gray-wall_1048944-30588139.jpg",
+      src: "/assets/images/third-footer-image.png",
       alt: "Instagram 3",
     },
     {
       id: 3,
-      src: "https://img.freepik.com/premium-photo/full-frame-shot-gray-wall_1048944-30588139.jpg",
+      src: "/assets/images/last-footer-image.png",
       alt: "Instagram 4",
     },
   ],

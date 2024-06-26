@@ -5,11 +5,11 @@ export const collections_data = {
       "Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
     images: [
       {
-        src: "https://img.freepik.com/premium-photo/full-frame-shot-gray-wall_1048944-30588139.jpg",
+        src: "/assets/images/women-white-dress.png",
         alt: "Collection 1",
       },
       {
-        src: "https://img.freepik.com/premium-photo/full-frame-shot-gray-wall_1048944-30588139.jpg",
+        src: "/assets/images/gray-image.png",
         alt: "Collection 2",
       },
     ],
@@ -24,7 +24,7 @@ export const collections_data = {
       "Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
     images: [
       {
-        src: "https://img.freepik.com/premium-photo/full-frame-shot-gray-wall_1048944-30588139.jpg",
+        src: "/assets/images/noivas-viert.png",
         alt: "Collection 3",
       },
     ],
@@ -40,15 +40,19 @@ export const collections_data = {
       "Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
     images: [
       {
-        src: "https://img.freepik.com/premium-photo/full-frame-shot-gray-wall_1048944-30588139.jpg",
+        src: "/assets/images/brown-dress.png",
         alt: "Collection 4",
       },
       {
-        src: "https://img.freepik.com/premium-photo/full-frame-shot-gray-wall_1048944-30588139.jpg",
+        src: "/assets/images/green-dress.png",
         alt: "Collection 4",
       },
       {
-        src: "https://img.freepik.com/premium-photo/full-frame-shot-gray-wall_1048944-30588139.jpg",
+        src: "/assets/images/festas-viert.png",
+        alt: "Collection 4",
+      },
+      {
+        src: "/assets/images/shadow-image.png",
         alt: "Collection 4",
       },
     ],

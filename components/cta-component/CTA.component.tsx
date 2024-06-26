@@ -25,7 +25,7 @@ const CTA: React.FC<CTAProps> = ({
       transition duration-300 ease-in-out
       max-w-[60%]
       lg:w-[350px]
-      h-[75px]
+      md:h-[75px]
       w-full
       mx-auto
       uppercase

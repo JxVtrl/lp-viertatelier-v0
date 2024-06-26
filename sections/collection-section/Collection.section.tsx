@@ -32,6 +32,7 @@ const Collection: React.FC = () => {
               }}
             >
               <Image
+                className="object-cover bg-cover bg-center"
                 src={collections_data.atelier_viert.images[0].src}
                 alt={collections_data.atelier_viert.images[0].alt}
                 layout="fill"
@@ -44,6 +45,7 @@ const Collection: React.FC = () => {
               }}
             >
               <Image
+                className="object-cover bg-cover bg-center"
                 layout="fill"
                 src={collections_data.atelier_viert.images[1].src}
                 alt={collections_data.atelier_viert.images[1].alt}
@@ -60,7 +62,11 @@ const Collection: React.FC = () => {
           >
             <div className="flex flex-col items-center">
               <div className="w-[40%]">
-                {collections_data.atelier_viert.title}
+                <h1
+                  className={`${canelaFont.className} italic text-center text-[42px]`}
+                >
+                  {collections_data.atelier_viert.title}
+                </h1>
               </div>
               <p
                 className="
@@ -92,16 +98,18 @@ const Collection: React.FC = () => {
             }}
           >
             <Image
-              style={{
-                position: "absolute",
-              }}
+              className="object-cover bg-cover bg-center absolute"
               layout="fill"
               src={collections_data.noivas_viert.images[0].src}
               alt={collections_data.noivas_viert.images[0].alt}
             />
 
-            <div className="w-[40%] z-10">
-              {collections_data.noivas_viert.title}
+            <div className="w-[40%] text-center z-10">
+              <h1
+                className={`${canelaFont.className} text-white italic text-[32px]`}
+              >
+                {collections_data.noivas_viert.title}
+              </h1>
             </div>
           </div>
           <div className="flex flex-col gap-[32px] items-center">
@@ -145,11 +153,14 @@ const Collection: React.FC = () => {
             <div
               className="
             w-[75%]
-
             
             "
             >
-              {collections_data.festas_viert.title}
+              <h1
+                className={`${canelaFont.className} italic font-extralight text-[42px]`}
+              >
+                {collections_data.festas_viert.title}
+              </h1>
             </div>
             <p className="text-[14px] text-black">
               {collections_data.festas_viert.description}
@@ -173,6 +184,22 @@ const Collection: React.FC = () => {
             }}
           >
             <Image
+              className="object-cover bg-cover bg-center"
+              layout="fill"
+              src={collections_data.festas_viert.images[1].src}
+              alt={collections_data.festas_viert.images[1].alt}
+            />
+          </div>
+          <div
+            className="relative"
+            style={{
+              aspectRatio: 0.775,
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <Image
+              className="object-cover bg-cover bg-center "
               layout="fill"
               src={collections_data.festas_viert.images[0].src}
               alt={collections_data.festas_viert.images[0].alt}
@@ -188,20 +215,7 @@ const Collection: React.FC = () => {
           >
             <Image
               layout="fill"
-              src={collections_data.festas_viert.images[1].src}
-              alt={collections_data.festas_viert.images[1].alt}
-            />
-          </div>
-          <div
-            className="relative"
-            style={{
-              aspectRatio: 0.775,
-              width: "100%",
-              height: "100%",
-            }}
-          >
-            <Image
-              layout="fill"
+              className="object-cover bg-cover bg-center"
               src={collections_data.festas_viert.images[2].src}
               alt={collections_data.festas_viert.images[2].alt}
             />
@@ -215,6 +229,8 @@ const Collection: React.FC = () => {
           flex-col
           items-center
           justify-center
+          container 
+          mx-auto
         "
         >
           <p
@@ -239,9 +255,9 @@ const Collection: React.FC = () => {
           <div className="relative h-[360px] mt-[130px] w-screen">
             <Image
               layout="fill"
-              className="absolute h-full object-cover bg-center"
-              src={collections_data.festas_viert.images[2].src}
-              alt={collections_data.festas_viert.images[2].alt}
+              className="absolute bg-cover h-full object-cover bg-center"
+              src={collections_data.festas_viert.images[3].src}
+              alt={collections_data.festas_viert.images[3].alt}
             />
           </div>
         </div>
@@ -250,12 +266,12 @@ const Collection: React.FC = () => {
     desktop: (
       <>
         {/* ATELIER VIERT */}
-        <div className="h-full flex gap-[50px] pt-[200px] px-[350px] text-black">
+        <div className="h-full container mx-auto flex gap-[50px] pt-[200px] px-[350px] text-black">
           <div className="">
             <div className="relative flex-col h-[580px] gap-[70px]">
               <Image
                 layout="fill"
-                className="object-center bg-cover w-[657px] h-full"
+                className="object-center bg-cover w-full max-w-[657px] h-full"
                 src={collections_data.atelier_viert.images[0].src}
                 alt={collections_data.atelier_viert.images[0].alt}
               />
@@ -269,7 +285,7 @@ const Collection: React.FC = () => {
               }}
             />
           </div>
-          <div className="max-w-[500px] flex flex-col">
+          <div className="max-w-[500px] w-full flex flex-col">
             <div>
               <h1
                 className={`${canelaFont.className} text-[90px] w-full text-nowrap`}
@@ -281,7 +297,7 @@ const Collection: React.FC = () => {
 
             <div className="relative w-[320px] flex-col h-[450px]">
               <Image
-                className="object-center mt-[40px] bg-cover"
+                className="object-center bg-center mt-[40px] bg-cover w-full h-full"
                 layout="fill"
                 src={collections_data.atelier_viert.images[1].src}
                 alt={collections_data.atelier_viert.images[1].alt}
@@ -292,15 +308,16 @@ const Collection: React.FC = () => {
 
         {/* NOIVAS VIERT */}
         <div className="flex bg-[#EFEFE9] mt-[200px]">
-          <div className="flex-1 relative">
+          <div className="w-1/2 relative">
             <Image
+              quality={100}
               layout="fill"
-              className="object-center bg-cover absolute"
+              className="object-center bg-center bg-cover absolute "
               src={collections_data.noivas_viert.images[0].src}
               alt={collections_data.noivas_viert.images[0].alt}
             />
           </div>
-          <div className="flex-1 py-[120px] pl-[55px] text-black">
+          <div className="w-1/2 py-[120px] pl-[55px] text-black">
             <TitleDescriptionBtn
               title={collections_data.noivas_viert.title}
               description={collections_data.noivas_viert.description}
@@ -311,7 +328,7 @@ const Collection: React.FC = () => {
         </div>
         {/* FESTAS VIERT */}
 
-        <div className="h-[100vh] text-black px-[230px] py-[120px]">
+        <div className="h-full lg:container lg:mx-auto text-black lg:px-[230px] py-[120px]">
           <div className="">
             <div>
               <TitleDescriptionBtn
@@ -323,38 +340,38 @@ const Collection: React.FC = () => {
             </div>
 
             <div className="flex relative gap-[37px] mt-[114px] h-[320px]">
-              <div className="bg-orange-800 w-[424px] p-2 relative">
-                <Image
-                  layout="fill"
-                  className="object-center relative w-full h-full bg-cover"
-                  src={collections_data.festas_viert.images[0].src}
-                  alt={collections_data.festas_viert.images[0].alt}
-                />
-              </div>
-              <div className="bg-orange-800 w-[424px] p-2 relative">
-                <Image
-                  layout="fill"
-                  className="object-center w-full h-full z-10 bg-cover"
-                  src={collections_data.festas_viert.images[1].src}
-                  alt={collections_data.festas_viert.images[1].alt}
-                />
-              </div>
-              <div className="absolute -top-[150%] right-0">
+              <div className="absolute -top-[150%] lg:right-0">
                 <div className="relative w-[424px] h-[653px] ">
                   <Image
                     layout="fill"
-                    className="object-center w-full h-full bg-cover "
+                    className="bg-cover object-cover"
                     src={collections_data.festas_viert.images[2].src}
                     alt={collections_data.festas_viert.images[2].alt}
                   />
                 </div>
+              </div>
+              <div className="w-[424px] p-2 relative">
+                <Image
+                  layout="fill"
+                  className="bg-cover object-cover bg-top"
+                  src={collections_data.festas_viert.images[0].src}
+                  alt={collections_data.festas_viert.images[0].alt}
+                />
+              </div>
+              <div className="w-[424px] p-2 relative">
+                <Image
+                  layout="fill"
+                  className=" z-10 bg-cover object-cover bg-top"
+                  src={collections_data.festas_viert.images[1].src}
+                  alt={collections_data.festas_viert.images[1].alt}
+                />
               </div>
             </div>
           </div>
         </div>
 
         {/* TAYLOR CALL */}
-        <div className="text-black mt-[490px]  flex flex-col gap-[82px] items-center justify-center">
+        <div className="text-black mt-[120px] container mx-auto flex flex-col gap-[82px] items-center justify-center">
           <p className="text-[30px]">{collections_data.taylor.description}</p>
 
           <CTA
@@ -367,12 +384,13 @@ const Collection: React.FC = () => {
           />
         </div>
         {/* LAST PHOTO BEFORE FOOTER */}
-        <div className="relative h-[360px]  w-screen">
+        <div className="relative h-[630px]  w-screen">
           <Image
+            quality={100}
             layout="fill"
-            className="absolute h-full object-cover bg-center"
-            src={collections_data.festas_viert.images[2].src}
-            alt={collections_data.festas_viert.images[2].alt}
+            className="absolute bg-cover h-full object-cover bg-bottom"
+            src={collections_data.festas_viert.images[3].src}
+            alt={collections_data.festas_viert.images[3].alt}
           />
         </div>
       </>
