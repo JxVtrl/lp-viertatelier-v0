@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Logo: React.FC = () => {
@@ -7,7 +8,9 @@ const Logo: React.FC = () => {
       className="relative max-w-[228px] max-h-[58px] w-full h-full"
       style={{ aspectRatio: 3.93 }}
     >
-      <Image src="/assets/brand/logo.png" alt="logo" layout="fill" />
+      <Link href="/">
+        <Image src="/assets/brand/logo.png" alt="logo" layout="fill" />
+      </Link>
     </div>
   );
 };

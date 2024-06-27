@@ -5,6 +5,7 @@ type CTAProps = {
   onClick?: () => void;
   variant?: "primary" | "secondary";
   className?: string;
+  mxAuto?: boolean;
 };
 
 const CTA: React.FC<CTAProps> = ({
@@ -12,6 +13,7 @@ const CTA: React.FC<CTAProps> = ({
   text = "EU QUERO",
   variant = "primary",
   className,
+  mxAuto = false,
 }) => {
   const primaryVariant = "text-white border border-white ";
 
@@ -27,7 +29,7 @@ const CTA: React.FC<CTAProps> = ({
       lg:w-[350px]
       md:h-[75px]
       w-full
-      mx-auto
+      ${mxAuto && "mx-auto"}
       uppercase
       ${className}
     `}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Logo, Navigation, Midia, Hamburguer } from "@/components";
 import { useApp } from "@/context/AppContext";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const {

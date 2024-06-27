@@ -19,7 +19,7 @@ const Content: React.FC = () => {
         </p>
       </div>
 
-      <CTA onClick={() => null} />
+      <CTA mxAuto onClick={() => null} />
     </div>
   );
 };

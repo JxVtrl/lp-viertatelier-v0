@@ -31,7 +31,7 @@ const TitleDescriptionBtn: React.FC<TitleDescriptionBtnProps> = ({
         {/* {collections_data.noivas_viert.title} */}
         {title}
       </span>
-      <p className="mt-[40px] max-w-[500px]">
+      <p className="mt-[40px] text-[18px] md:text-[22px] max-w-[500px]">
         {/* {collections_data.noivas_viert.description} */}
         {description}
       </p>

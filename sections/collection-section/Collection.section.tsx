@@ -143,33 +143,25 @@ const Collection: React.FC = () => {
             w-full
             flex
             flex-col
-            gap-[24px]
-          
+            gap-[32px]
           "
             style={{
               aspectRatio: 0.775,
             }}
           >
-            <div
-              className="
-            w-[75%]
-            
-            "
+            <h1
+              className={`${canelaFont.className} italic font-extralight text-[42px]`}
             >
-              <h1
-                className={`${canelaFont.className} italic font-extralight text-[42px]`}
-              >
-                {collections_data.festas_viert.title}
-              </h1>
-            </div>
-            <p className="text-[14px] text-black">
+              {collections_data.festas_viert.title}
+            </h1>
+            <p className="text-[20px] leading-7 lg:leading-relaxed md:text-[24px]  text-black">
               {collections_data.festas_viert.description}
             </p>
 
             <CTA
               text={collections_data.festas_viert.cta.text}
               variant="secondary"
-              className="w-[100%]"
+              className="min-w-[250px] w-full "
               onClick={() => {
                 navigateTo(collections_data.festas_viert.cta.link);
               }}
@@ -255,7 +247,7 @@ const Collection: React.FC = () => {
           <div className="relative h-[360px] mt-[130px] w-screen">
             <Image
               layout="fill"
-              className="absolute bg-cover h-full object-cover bg-center"
+              className="absolute bg-cover h-full object-cover bg-bottom   "
               src={collections_data.festas_viert.images[3].src}
               alt={collections_data.festas_viert.images[3].alt}
             />
@@ -328,7 +320,7 @@ const Collection: React.FC = () => {
         </div>
         {/* FESTAS VIERT */}
 
-        <div className="h-full lg:container lg:mx-auto text-black lg:px-[230px] py-[120px]">
+        <div className="h-full lg:container lg:mx-auto text-black lg:px-[230px] lg:py-[80px]">
           <div className="">
             <div>
               <TitleDescriptionBtn
@@ -339,9 +331,9 @@ const Collection: React.FC = () => {
               />
             </div>
 
-            <div className="flex relative gap-[37px] mt-[114px] h-[320px]">
+            <div className="flex relative gap-[37px] mt-[114px] md:h-[320px]">
               <div className="absolute -top-[150%] lg:right-0">
-                <div className="relative w-[424px] h-[653px] ">
+                <div className="relative md:w-[424px] md:h-[350px] lg:h-[653px] ">
                   <Image
                     layout="fill"
                     className="bg-cover object-cover"
@@ -388,7 +380,7 @@ const Collection: React.FC = () => {
           <Image
             quality={100}
             layout="fill"
-            className="absolute bg-cover h-full object-cover bg-bottom"
+            className="absolute bg-cover  h-full object-cover bg-top"
             src={collections_data.festas_viert.images[3].src}
             alt={collections_data.festas_viert.images[3].alt}
           />

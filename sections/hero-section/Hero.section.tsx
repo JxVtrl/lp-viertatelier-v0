@@ -4,14 +4,16 @@ import { HeroBackground, HeroContent } from "./components";
 
 const Hero: React.FC = () => {
   return (
-    <section className="
+    <section
+      className="
       relative
       flex
       flex-col
       justify-center
       w-full
       h-screen
-    ">
+    "
+    >
       <Header />
       <HeroBackground />
       <HeroContent />

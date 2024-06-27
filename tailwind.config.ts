@@ -23,6 +23,11 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontSize: {
+        "clamp-sm": ["clamp(1.5rem, 4vw, 2rem)", "1.5rem"],
+        "clamp-md": ["clamp(1.5rem, 4vw, 2.5rem)", "1.5rem"],
+        "clamp-lg": ["clamp(1.5rem, 4vw, 3rem)", "1.5rem"],
+      },
     },
   },
   plugins: [],

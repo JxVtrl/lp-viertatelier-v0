@@ -5,6 +5,7 @@ import { useApp } from "@/context/AppContext";
 import localFont from "next/font/local";
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const canelaFont = localFont({
   src: "../../styles/fonts/canela/Canela-Regular.woff2",
@@ -70,9 +71,9 @@ const Footer: React.FC = () => {
     "
         >
           {midia_data.map((midia) => (
-            <li className="cursor-pointer" key={midia.id}>
-              {midia.icon}
-            </li>
+            <Link target="blank" key={midia.id} href={midia.link}>
+              <li className="cursor-pointer">{midia.icon}</li>
+            </Link>
           ))}
         </ul>
       </div>
