@@ -132,10 +132,10 @@ const Collection: React.FC = () => {
           grid 
           grid-cols-2
           grid-rows-2
-          gap-[16px]
+          gap-[24px]
           mb-[5vh]
           mt-[120px]
-          px-[24px]
+          px-[20px]
           h-[750px]
           md:h-fit
         "
@@ -157,7 +157,7 @@ const Collection: React.FC = () => {
             >
               {collections_data.festas_viert.title}
             </h1>
-            <p className="text-[15px] leading-6 lg:leading-relaxed md:text-[24px]  text-black">
+            <p className="text-[15px] leading-6 lg:leading-relaxed md:text-[24px] text-black">
               {collections_data.festas_viert.description}
             </p>
 
