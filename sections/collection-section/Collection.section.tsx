@@ -63,7 +63,7 @@ const Collection: React.FC = () => {
             <div className="flex flex-col items-center">
               <div className="w-[40%]">
                 <h1
-                  className={`${canelaFont.className} italic text-black text-center text-[42px]`}
+                  className={`${canelaFont.className} italic text-nowrap text-black text-center text-[42px]`}
                 >
                   {collections_data.atelier_viert.title}
                 </h1>
