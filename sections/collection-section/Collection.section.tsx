@@ -280,7 +280,7 @@ const Collection: React.FC = () => {
           <div className="max-w-[500px] w-full flex flex-col">
             <div>
               <h1
-                className={`${canelaFont.className} text-[90px] w-full text-nowrap`}
+                className={`${canelaFont.className} text-black md:text-[78px] w-full text-nowrap`}
               >
                 {collections_data.atelier_viert.title}
               </h1>
