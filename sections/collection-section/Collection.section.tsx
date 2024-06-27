@@ -23,8 +23,8 @@ const Collection: React.FC = () => {
     mobile: (
       <>
         {/* ATELIER VIERT */}
-        <div className="h-fit flex flex-col gap-[48px] pt-[10vh] pb-[7vh]">
-          <div className="grid grid-cols-2 gap-[16px] px-[24px]">
+        <div className="h-fit  flex flex-col gap-[48px] pt-[10vh] pb-[7vh]">
+          <div className="grid  grid-cols-2 gap-[16px] px-[24px]">
             <div
               className="relative"
               style={{
@@ -129,13 +129,15 @@ const Collection: React.FC = () => {
         {/* FESTAS VIERT */}
         <div
           className="
-         grid 
+          grid 
           grid-cols-2
           grid-rows-2
           gap-[16px]
           mb-[5vh]
           mt-[120px]
           px-[24px]
+          h-[750px]
+          md:h-fit
         "
         >
           <div
@@ -143,7 +145,8 @@ const Collection: React.FC = () => {
             w-full
             flex
             flex-col
-            gap-[32px]
+            gap-[10px]
+            md:gap-[34px]
           "
             style={{
               aspectRatio: 0.775,
@@ -154,14 +157,14 @@ const Collection: React.FC = () => {
             >
               {collections_data.festas_viert.title}
             </h1>
-            <p className="text-[20px] leading-7 lg:leading-relaxed md:text-[24px]  text-black">
+            <p className="text-[16px] leading-6 lg:leading-relaxed md:text-[24px]  text-black">
               {collections_data.festas_viert.description}
             </p>
 
             <CTA
               text={collections_data.festas_viert.cta.text}
               variant="secondary"
-              className="min-w-[250px] w-full "
+              className="min-w-[180px] w-full "
               onClick={() => {
                 navigateTo(collections_data.festas_viert.cta.link);
               }}
