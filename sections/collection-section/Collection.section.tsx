@@ -63,7 +63,7 @@ const Collection: React.FC = () => {
             <div className="flex flex-col items-center">
               <div className="w-[40%]">
                 <h1
-                  className={`${canelaFont.className} italic text-center text-[42px]`}
+                  className={`${canelaFont.className} italic text-black text-center text-[42px]`}
                 >
                   {collections_data.atelier_viert.title}
                 </h1>
@@ -278,9 +278,9 @@ const Collection: React.FC = () => {
             />
           </div>
           <div className="max-w-[500px] w-full flex flex-col">
-            <div>
+            <div className="text-black">
               <h1
-                className={`${canelaFont.className} text-black md:text-[78px] w-full text-nowrap`}
+                className={`${canelaFont.className} text-black text-[75px] w-full text-nowrap`}
               >
                 {collections_data.atelier_viert.title}
               </h1>
