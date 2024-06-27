@@ -25,10 +25,10 @@ const CTA: React.FC<CTAProps> = ({
       ${variant === "primary" ? primaryVariant : secondaryVariant}
       font-bold py-2 px-4 rounded
       transition duration-300 ease-in-out
-      max-w-[60%]
       lg:w-[350px]
       md:h-[75px]
       w-full
+      max-w-[270px]
       ${mxAuto && "mx-auto"}
       uppercase
       ${className}

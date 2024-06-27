@@ -1,5 +1,5 @@
 export const footer_data = {
-  followText: "Siga nosso atelier no Instagram",
+  followText: "SIGA NOSSO PERFIL NO INSTAGRAM",
   instaUsername: "@viert_atelier",
   images: [
     {

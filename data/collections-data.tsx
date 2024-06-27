@@ -1,8 +1,9 @@
 export const collections_data = {
   atelier_viert: {
     title: "Atelier Viert",
+    subtitle: "Sob Medida",
     description:
-      "Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "Descubra a exclusividade e sofisticação do nosso atelier, que combina elegância e conforto, através do nosso processo criativo e conceito de taylor made.",
     images: [
       {
         src: "/assets/images/women-white-dress.png",
@@ -14,14 +15,15 @@ export const collections_data = {
       },
     ],
     cta: {
-      text: "QUERO VER",
+      text: "Saiba Mais",
       link: "/atelier-viert",
     },
   },
   noivas_viert: {
     title: "Viert Noivas",
+    subtitle: "Sob Medida",
     description:
-      "Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "Cada vestido é personalizado refletindo a exclusividade de um produto sob medida, que terá a identidade da noiva em consonância com o olhar único da nossa estilista Lili Carvalho.",
     images: [
       {
         src: "/assets/images/noivas-viert.png",
@@ -29,7 +31,7 @@ export const collections_data = {
       },
     ],
     cta: {
-      text: "QUERO VER",
+      text: "Conheça nossos vestidos",
       link: "/noivas-viert",
     },
   },
@@ -37,7 +39,7 @@ export const collections_data = {
   festas_viert: {
     title: "Viert Festas",
     description:
-      "Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "Para convidadas e madrinhas, com possibilidade de personalização completa através do sob medida ou escolhendo da nossa seleção exclusiva de prêt-à-porter.",
     images: [
       {
         src: "/assets/images/brown-dress.png",
@@ -57,15 +59,15 @@ export const collections_data = {
       },
     ],
     cta: {
-      text: "QUERO VER",
+      text: "Conheça nossos vestidos",
       link: "/festas-viert",
     },
   },
   taylor: {
     description:
-      "Conheça nossa seleção de vestidos taylor made com design autoral e único.",
+      "Nosso atelier está aberto de segunda a sexta, das 10h às 19h, atendendo exclusivamente com hora marcada. ",
     cta: {
-      text: "MARCAR VISITA",
+      text: "Agendar Visita",
       link: "/taylor",
     },
   },

@@ -109,6 +109,8 @@ const Collection: React.FC = () => {
                 className={`${canelaFont.className} text-white italic text-[32px]`}
               >
                 {collections_data.noivas_viert.title}
+                <br />
+                {collections_data.noivas_viert.subtitle}
               </h1>
             </div>
           </div>
@@ -136,7 +138,7 @@ const Collection: React.FC = () => {
           mb-[5vh]
           mt-[120px]
           px-[20px]
-          h-[750px]
+          max-h-[800px]
           md:h-fit
         "
         >
@@ -161,7 +163,7 @@ const Collection: React.FC = () => {
             <CTA
               text={collections_data.festas_viert.cta.text}
               variant="secondary"
-              className="min-w-[180px] w-full "
+              className="min-w-[180px] w-full text-[12px] text-nowrap"
               onClick={() => {
                 navigateTo(collections_data.festas_viert.cta.link);
               }}
@@ -176,6 +178,7 @@ const Collection: React.FC = () => {
             }}
           >
             <Image
+              quality={100}
               className="object-cover bg-cover bg-center"
               layout="fill"
               src={collections_data.festas_viert.images[1].src}
@@ -191,6 +194,7 @@ const Collection: React.FC = () => {
             }}
           >
             <Image
+              quality={100}
               className="object-cover bg-cover bg-center "
               layout="fill"
               src={collections_data.festas_viert.images[0].src}
@@ -206,6 +210,7 @@ const Collection: React.FC = () => {
             }}
           >
             <Image
+              quality={100}
               layout="fill"
               className="object-cover bg-cover bg-center"
               src={collections_data.festas_viert.images[2].src}

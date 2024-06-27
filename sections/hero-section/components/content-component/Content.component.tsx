@@ -1,7 +1,6 @@
 import { CTA } from "@/components";
 import { useApp } from "@/context/AppContext";
 import React from "react";
-import localFont from "next/font/local";
 
 const Content: React.FC = () => {
   const {
@@ -14,12 +13,12 @@ const Content: React.FC = () => {
         <h1 className="text-[80px] tracking-[2px]">Atelier Sob Medida</h1>
 
         <p className="text-[18px]">
-          Conheça nossa seleção de vestidos taylor{!isDesktop ? <br /> : " "}
-          made com design autoral e único
+          Uma experiência única e personalizada{!isDesktop ? <br /> : " "}
+          exclusivamente para você.
         </p>
       </div>
 
-      <CTA mxAuto onClick={() => null} />
+      <CTA text="Descubra" mxAuto onClick={() => null} />
     </div>
   );
 };
