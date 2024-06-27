@@ -153,11 +153,11 @@ const Collection: React.FC = () => {
             }}
           >
             <h1
-              className={`${canelaFont.className} italic text-black font-extralight text-[32px] md:text-[42px]`}
+              className={`${canelaFont.className} italic text-black font-extralight text-[30px] md:text-[42px]`}
             >
               {collections_data.festas_viert.title}
             </h1>
-            <p className="text-[16px] leading-6 lg:leading-relaxed md:text-[24px]  text-black">
+            <p className="text-[15px] leading-6 lg:leading-relaxed md:text-[24px]  text-black">
               {collections_data.festas_viert.description}
             </p>
 
