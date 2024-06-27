@@ -6,11 +6,11 @@ export const collections_data = {
       "Descubra a exclusividade e sofisticação do nosso atelier, que combina elegância e conforto, através do nosso processo criativo e conceito de taylor made.",
     images: [
       {
-        src: "/assets/images/women-white-dress.png",
+        src: "/assets/images/atelier_viert_1.jpg",
         alt: "Collection 1",
       },
       {
-        src: "/assets/images/gray-image.png",
+        src: "/assets/images/atelier_viert_2.jpg",
         alt: "Collection 2",
       },
     ],
@@ -54,7 +54,7 @@ export const collections_data = {
         alt: "Collection 4",
       },
       {
-        src: "/assets/images/shadow-image.png",
+        src: "/assets/images/last-photo-before-footer.png",
         alt: "Collection 4",
       },
     ],

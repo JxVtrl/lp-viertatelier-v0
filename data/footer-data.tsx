@@ -19,7 +19,7 @@ export const footer_data = {
     },
     {
       id: 3,
-      src: "/assets/images/last-footer-image.png",
+      src: "/assets/images/last-footer-photo.png",
       alt: "Instagram 4",
     },
   ],

@@ -252,7 +252,7 @@ const Collection: React.FC = () => {
           <div className="relative h-[360px] mt-[130px] w-screen">
             <Image
               layout="fill"
-              className="absolute bg-cover h-full object-cover bg-bottom   "
+              className="absolute bg-cover h-full object-cover bg-center"
               src={collections_data.festas_viert.images[3].src}
               alt={collections_data.festas_viert.images[3].alt}
             />
@@ -265,11 +265,11 @@ const Collection: React.FC = () => {
         {/* ATELIER VIERT */}
         <div className="h-full container mx-auto flex justify-center items-center gap-[50px] pt-[150px] text-black">
           <div>
-            <div className="relative flex-col h-[580px] w-[320px] gap-[70px]">
+            <div className="relative flex-col h-[450px] w-[320px] gap-[70px]">
               <Image
                 quality={100}
                 layout="fill"
-                className="object-center bg-cover w-full max-w-[657px] h-full"
+                className="object-cover bg-cover w-full max-w-[657px] h-full"
                 src={collections_data.atelier_viert.images[0].src}
                 alt={collections_data.atelier_viert.images[0].alt}
               />
