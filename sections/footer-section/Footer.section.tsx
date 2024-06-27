@@ -25,10 +25,12 @@ const Footer: React.FC = () => {
   return (
     <footer className="flex flex-col items-center justify-center text-black pt-[136px] font-normal bg-[#EFEFE9]">
       <div className={`flex flex-col items-center`}>
-        <div className={`text-[21px] uppercase ${inter.className}`}>
+        <div
+          className={`text-[17px] md:text-[21px] uppercase ${inter.className}`}
+        >
           {footer_data.followText}
         </div>
-        <div className={`text-[44px] ${canelaFont.className}`}>
+        <div className={`text-[32px] md:text-[44px] ${canelaFont.className}`}>
           {footer_data.instaUsername}
         </div>
       </div>
@@ -92,10 +94,12 @@ const Footer: React.FC = () => {
         <div className="text-[#000] font-normal text-[14px] md:text-[24px]">
           {footer_data.address}
         </div>
-        <div className="text-[#000] pb-8 flex text-[14px] font-normal md:text-[24px]">
-          <p className="mr-2">{footer_data.businessHours.daysWorking} </p>
-          {footer_data.businessHours.startWorking}h às{" "}
-          {footer_data.businessHours.stopWorking}h
+        <div className="text-[#000] pb-8 flex text-[17px] md:text-[21px] font-normal ">
+          <p className="mr-2">
+            {footer_data.businessHours.daysWorking}{" "}
+            {footer_data.businessHours.startWorking}h às{" "}
+            {footer_data.businessHours.stopWorking}h
+          </p>
         </div>
       </div>
     </footer>

@@ -132,7 +132,7 @@ const Collection: React.FC = () => {
           grid 
           grid-cols-2
           grid-rows-2
-          gap-[24px]
+          gap-[20px]
           mb-[5vh]
           mt-[120px]
           px-[20px]
@@ -145,19 +145,16 @@ const Collection: React.FC = () => {
             w-full
             flex
             flex-col
-            gap-[10px]
-            md:gap-[34px]
+            gap-[12px]
+            md:gap-[28px]
           "
-            style={{
-              aspectRatio: 0.775,
-            }}
           >
             <h1
               className={`${canelaFont.className} italic text-black font-extralight text-[30px] md:text-[42px]`}
             >
               {collections_data.festas_viert.title}
             </h1>
-            <p className="text-[15px] leading-6 lg:leading-relaxed md:text-[24px] text-black">
+            <p className="text-[15px] leading-6 lg:leading-relaxed text-black">
               {collections_data.festas_viert.description}
             </p>
 
