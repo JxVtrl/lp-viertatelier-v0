@@ -153,7 +153,7 @@ const Collection: React.FC = () => {
             }}
           >
             <h1
-              className={`${canelaFont.className} italic text-black font-extralight text-[42px]`}
+              className={`${canelaFont.className} italic text-black font-extralight text-[32px] md:text-[42px]`}
             >
               {collections_data.festas_viert.title}
             </h1>
