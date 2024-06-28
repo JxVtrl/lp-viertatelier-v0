@@ -55,8 +55,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const checkWidth = () => {
     setDevice({
-      isMobile: window.innerWidth <= 1541,
-      isDesktop: window.innerWidth >= 1542,
+      isMobile: window.innerWidth <= 1047,
+      isDesktop: window.innerWidth >= 1048,
     });
 
     setActiveBackground({
