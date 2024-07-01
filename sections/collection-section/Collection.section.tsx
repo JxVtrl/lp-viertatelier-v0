@@ -368,7 +368,7 @@ const Collection: React.FC = () => {
             marginRight: "18.2%",
           }}
         >
-          <div>
+          <div className="w-[40%]">
             <TitleDescriptionBtn
               title={collections_data.festas_viert.title}
               description={collections_data.festas_viert.description}
@@ -440,7 +440,7 @@ const Collection: React.FC = () => {
         </div>
 
         {/* LAST PHOTO BEFORE FOOTER */}
-        <div className="relative h-[630px]  w-screen">
+        <div className="relative h-[64.17vh]  w-screen">
           <Image
             quality={100}
             layout="fill"

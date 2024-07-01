@@ -26,22 +26,19 @@ const TitleDescriptionBtn: React.FC<TitleDescriptionBtnProps> = ({
   return (
     <>
       <span
-        className={`text-[90px] font-thin text-nowrap  ${canelaFont.className}`}
+        className={`font-thin text-nowrap  ${canelaFont.className}`}
+        style={{
+          fontSize: "clamp(75px, 5vw, 90px)",
+        }}
       >
-        {/* {collections_data.noivas_viert.title} */}
         {title}
       </span>
-      <p className="mt-[40px] text-[18px] md:text-[22px] max-w-[500px]">
-        {/* {collections_data.noivas_viert.description} */}
-        {description}
-      </p>
+      <p className="mt-[40px] text-[18px] md:text-[22px]">{description}</p>
       <CTA
         variant="secondary"
         className="mt-[80px]"
-        // text={collections_data.noivas_viert.cta.text}
         text={btnText}
         onClick={() => {
-          //   navigateTo(collections_data.noivas_viert.cta.link);
           navigateTo(navigationLink);
         }}
       />
