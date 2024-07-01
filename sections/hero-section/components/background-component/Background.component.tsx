@@ -13,6 +13,7 @@ const BGImage = ({ src, alt }: { src: string; alt: string }) => {
         style={{
           objectFit: "cover",
         }}
+        loading="eager"
       />
     </div>
   );
