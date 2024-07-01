@@ -36,6 +36,7 @@ const Collection: React.FC = () => {
                 src={collections_data.atelier_viert.images[0].src}
                 alt={collections_data.atelier_viert.images[0].alt}
                 layout="fill"
+                loading="eager"
               />
             </div>
             <div
@@ -49,6 +50,7 @@ const Collection: React.FC = () => {
                 layout="fill"
                 src={collections_data.atelier_viert.images[1].src}
                 alt={collections_data.atelier_viert.images[1].alt}
+                loading="eager"
               />
             </div>
           </div>
@@ -263,15 +265,32 @@ const Collection: React.FC = () => {
     desktop: (
       <>
         {/* ATELIER VIERT */}
-        <div className="h-full container mx-auto flex justify-center items-center gap-[50px] pt-[150px] text-black">
-          <div>
-            <div className="relative flex-col h-[450px] w-[320px] gap-[70px]">
+        <div
+          className="flex items-center justify-center gap-[50px] pt-[150px]"
+          style={{
+            paddingLeft: "18.2%",
+            paddingRight: "18.2%",
+          }}
+        >
+          <div
+            className="w-full flex flex-col max-w-[45%]"
+            style={{
+              flexShrink: 0,
+            }}
+          >
+            <div
+              className="relative"
+              style={{
+                aspectRatio: 0.667,
+              }}
+            >
               <Image
                 quality={100}
                 layout="fill"
-                className="object-cover bg-cover w-full max-w-[657px] h-full"
+                className="object-cover"
                 src={collections_data.atelier_viert.images[0].src}
                 alt={collections_data.atelier_viert.images[0].alt}
+                loading="eager"
               />
             </div>
             <CTA
@@ -283,7 +302,12 @@ const Collection: React.FC = () => {
               }}
             />
           </div>
-          <div className="max-w-[500px] w-full flex flex-col">
+          <div
+            className="w-full flex flex-col max-w-[45%]"
+            style={{
+              flexShrink: 0,
+            }}
+          >
             <div className="text-black">
               <h1
                 className={`${canelaFont.className} text-black text-[75px] w-full text-nowrap`}
@@ -293,10 +317,16 @@ const Collection: React.FC = () => {
               <p>{collections_data.atelier_viert.description}</p>
             </div>
 
-            <div className="relative w-[320px] flex-col h-[450px]">
+            <div
+              className="relative"
+              style={{
+                aspectRatio: 0.684,
+              }}
+            >
               <Image
-                className="object-cover bg-center mt-[40px] bg-cover w-full h-full"
+                className="object-cover bg-center pt-[40px]"
                 layout="fill"
+                loading="eager"
                 src={collections_data.atelier_viert.images[1].src}
                 alt={collections_data.atelier_viert.images[1].alt}
               />
@@ -331,9 +361,9 @@ const Collection: React.FC = () => {
             />
           </div>
         </div>
-        {/* FESTAS VIERT */}
 
-        <div className="h-full lg:container lg:mx-auto text-black lg:px-[230px] lg:py-[80px]">
+        {/* FESTAS VIERT */}
+        <div className="h-full lg:container lg:mx-auto text-black lg:py-[80px]">
           <div className="">
             <div>
               <TitleDescriptionBtn
@@ -388,6 +418,7 @@ const Collection: React.FC = () => {
             }}
           />
         </div>
+
         {/* LAST PHOTO BEFORE FOOTER */}
         <div className="relative h-[630px]  w-screen">
           <Image
