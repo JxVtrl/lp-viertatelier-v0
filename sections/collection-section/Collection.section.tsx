@@ -266,14 +266,14 @@ const Collection: React.FC = () => {
       <>
         {/* ATELIER VIERT */}
         <div
-          className="flex items-center justify-center gap-[50px] pt-[150px]"
+          className="flex items-center justify-center gap-[50px] pt-[18vh]"
           style={{
             paddingLeft: "18.2%",
             paddingRight: "18.2%",
           }}
         >
           <div
-            className="w-full flex flex-col max-w-[45%]"
+            className="w-full flex flex-col max-w-[50%]"
             style={{
               flexShrink: 0,
             }}
@@ -303,7 +303,7 @@ const Collection: React.FC = () => {
             />
           </div>
           <div
-            className="w-full flex flex-col max-w-[45%]"
+            className="w-full flex flex-col max-w-[50%]"
             style={{
               flexShrink: 0,
             }}
@@ -335,19 +335,17 @@ const Collection: React.FC = () => {
         </div>
 
         {/* NOIVAS VIERT */}
-        <div className="flex bg-[#EFEFE9] mt-[200px]">
+        <div className="flex bg-[#EFEFE9] mt-[20vh] h-[79.90vh]">
           <div
             style={{
               aspectRatio: 1.9,
             }}
-            className="w-1/2 
-            
-          relative"
+            className="w-1/2 relative"
           >
             <Image
               quality={100}
               layout="fill"
-              className="object-center bg-bottom bg-cover absolute "
+              className="object-center bg-bottom object-cover "
               src={collections_data.noivas_viert.images[0].src}
               alt={collections_data.noivas_viert.images[0].alt}
             />
@@ -363,44 +361,66 @@ const Collection: React.FC = () => {
         </div>
 
         {/* FESTAS VIERT */}
-        <div className="h-full lg:container lg:mx-auto text-black lg:py-[80px]">
-          <div className="">
-            <div>
-              <TitleDescriptionBtn
-                title={collections_data.festas_viert.title}
-                description={collections_data.festas_viert.description}
-                navigationLink={collections_data.festas_viert.cta.link}
-                btnText={collections_data.festas_viert.cta.text}
+        <div
+          className="relative text-black my-[20vh]"
+          style={{
+            marginLeft: "18.2%",
+            marginRight: "18.2%",
+          }}
+        >
+          <div>
+            <TitleDescriptionBtn
+              title={collections_data.festas_viert.title}
+              description={collections_data.festas_viert.description}
+              navigationLink={collections_data.festas_viert.cta.link}
+              btnText={collections_data.festas_viert.cta.text}
+            />
+          </div>
+
+          <div className="absolute top-[0] lg:right-0">
+            <div
+              className="relative w-[35.90vw]"
+              style={{
+                aspectRatio: 0.798,
+              }}
+            >
+              <Image
+                layout="fill"
+                className="object-cover"
+                src={collections_data.festas_viert.images[2].src}
+                alt={collections_data.festas_viert.images[2].alt}
+                style={{
+                  aspectRatio: 0.798,
+                }}
               />
             </div>
-
-            <div className="flex relative gap-[37px] mt-[114px] md:h-[320px]">
-              <div className="absolute -top-[150%] lg:right-0">
-                <div className="relative md:w-[424px] md:h-[350px] lg:h-[653px] ">
-                  <Image
-                    layout="fill"
-                    className="bg-cover bg-center object-cover"
-                    src={collections_data.festas_viert.images[2].src}
-                    alt={collections_data.festas_viert.images[2].alt}
-                  />
-                </div>
-              </div>
-              <div className="w-[424px] p-2 relative">
-                <Image
-                  layout="fill"
-                  className="bg-cover object-cover bg-center"
-                  src={collections_data.festas_viert.images[0].src}
-                  alt={collections_data.festas_viert.images[0].alt}
-                />
-              </div>
-              <div className="w-[424px] p-2 relative">
-                <Image
-                  layout="fill"
-                  className=" z-10 bg-cover object-cover bg-center"
-                  src={collections_data.festas_viert.images[1].src}
-                  alt={collections_data.festas_viert.images[1].alt}
-                />
-              </div>
+          </div>
+          <div className="flex relative gap-[37px] mt-[114px] ">
+            <div
+              className="p-2 relative w-[30%]"
+              style={{
+                aspectRatio: 0.798,
+              }}
+            >
+              <Image
+                layout="fill"
+                className="object-cover"
+                src={collections_data.festas_viert.images[0].src}
+                alt={collections_data.festas_viert.images[0].alt}
+              />
+            </div>
+            <div
+              className="p-2 relative w-[30%]"
+              style={{
+                aspectRatio: 0.798,
+              }}
+            >
+              <Image
+                layout="fill"
+                className="object-cover"
+                src={collections_data.festas_viert.images[1].src}
+                alt={collections_data.festas_viert.images[1].alt}
+              />
             </div>
           </div>
         </div>
