@@ -63,13 +63,11 @@ const Collection: React.FC = () => {
           "
           >
             <div className="flex flex-col items-center">
-              <div className="w-[40%]">
-                <h1
-                  className={`${canelaFont.className} italic text-nowrap text-black text-center text-[42px]`}
-                >
-                  {collections_data.atelier_viert.title}
-                </h1>
-              </div>
+              <h1
+                className={`${canelaFont.className} italic text-nowrap text-black text-center text-[42px]`}
+              >
+                {collections_data.atelier_viert.title}
+              </h1>
               <p
                 className="
                 text-black
@@ -356,6 +354,7 @@ const Collection: React.FC = () => {
               description={collections_data.noivas_viert.description}
               navigationLink={collections_data.noivas_viert.cta.link}
               btnText={collections_data.noivas_viert.cta.text}
+              descrNeedsToFit
             />
           </div>
         </div>
@@ -374,6 +373,7 @@ const Collection: React.FC = () => {
               description={collections_data.festas_viert.description}
               navigationLink={collections_data.festas_viert.cta.link}
               btnText={collections_data.festas_viert.cta.text}
+              descrNeedsToFit={false}
             />
           </div>
 

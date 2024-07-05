@@ -7,6 +7,7 @@ type TitleDescriptionBtnProps = {
   description: string;
   navigationLink: string;
   btnText: string;
+  descrNeedsToFit: boolean;
 };
 
 const canelaFont = localFont({
@@ -18,6 +19,7 @@ const TitleDescriptionBtn: React.FC<TitleDescriptionBtnProps> = ({
   description,
   navigationLink,
   btnText,
+  descrNeedsToFit
 }) => {
   const navigateTo = (link: string) => {
     window.location.href = link;
@@ -33,7 +35,7 @@ const TitleDescriptionBtn: React.FC<TitleDescriptionBtnProps> = ({
       >
         {title}
       </span>
-      <p className="mt-[40px] text-[18px] md:text-[22px]">{description}</p>
+      <p className={`mt-[40px] text-[18px] md:text-[22px] ${descrNeedsToFit && 'max-w-[80%]'}`}>{description}</p>
       <CTA
         variant="secondary"
         className="mt-[80px]"
