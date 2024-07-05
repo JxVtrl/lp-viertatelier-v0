@@ -12,7 +12,7 @@ const Content: React.FC = () => {
       <div className='flex flex-col gap-y-[12px] lg:gap-y-[0]'>
         <h1 className='text-[48px] md:text-[64px] lg:text-[80px] tracking-[2px]'>Atelier Sob Medida</h1>
 
-        <p className='text-[16px] md:text-[18px]'>
+        <p className='text-[18px] md:text-[22px]'>
           Uma experiência única e personalizada{!isDesktop ? <br /> : ' '}
           exclusivamente para você.
         </p>
