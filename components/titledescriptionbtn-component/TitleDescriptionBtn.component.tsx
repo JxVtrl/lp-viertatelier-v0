@@ -35,7 +35,7 @@ const TitleDescriptionBtn: React.FC<TitleDescriptionBtnProps> = ({
       >
         {title}
       </span>
-      <p className={`mt-[40px] text-[18px] md:text-[22px] ${descrNeedsToFit && 'max-w-[80%]'}`}>{description}</p>
+      <p className={`mt-[3.70%] text-[18px] md:text-[22px] ${descrNeedsToFit && 'max-w-[80%]'}`}>{description}</p>
       <CTA
         variant="secondary"
         className="mt-[80px]"

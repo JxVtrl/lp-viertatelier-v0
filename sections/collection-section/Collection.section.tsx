@@ -312,7 +312,7 @@ const Collection: React.FC = () => {
               >
                 {collections_data.atelier_viert.title}
               </h1>
-              <p>{collections_data.atelier_viert.description}</p>
+              <p className="text-[18px] md:text-[22px]">{collections_data.atelier_viert.description}</p>
             </div>
 
             <div
