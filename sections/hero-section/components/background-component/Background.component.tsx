@@ -1,50 +1,61 @@
 import { useApp } from "@/context/AppContext";
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { background_data } from "@/data/background-data";
-import Image from "next/image";
-
-const BGImage = ({ src, alt }: { src: string; alt: string }) => {
-  return (
-    <div className="relative w-full h-full">
-      <Image
-        src={src}
-        alt={alt}
-        layout="fill"
-        style={{
-          objectFit: "cover",
-        }}
-        loading="eager"
-      />
-    </div>
-  );
-};
+import gsap from "gsap";
+import BGImage from "@/components/bgimage-component/BGImage.component";
 
 const Background: React.FC = () => {
   const {
     device: { isDesktop },
-    activeBackground,
+    activeBackground: {
+      collection, // Variável para definir a coleção que está sendo exibida
+      index: itemIndex, // Variável para definir o índice do item dentro da coleção
+    },
   } = useApp();
 
-  console.log("activeBg", background_data[activeBackground.collection][1].src);
+  const [nextIndex, setNextIndex] = useState((itemIndex + 1) % background_data[collection].length);
+  const imageContainerRef = useRef<HTMLDivElement>(null);
+
+  const fadeAnimation = useCallback(() => {
+    if (imageContainerRef.current) {
+      gsap.fromTo(
+        imageContainerRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 1, ease: "power1.inOut" }
+      );
+    }
+  }, []);
+
+  useEffect(() => {
+    if (imageContainerRef.current) {
+      fadeAnimation();
+    }
+  }, [fadeAnimation]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNextIndex((prevIndex) => (prevIndex + 1) % background_data[collection].length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [collection]);
 
   return (
-    <div className="absolute inset-0 w-full h-[100vh] z-[-1] grid grid-cols-1 lg:grid-cols-2">
-      <BGImage
-        src={
-          background_data[activeBackground.collection][activeBackground.index]
-            .src
-        }
-        alt={
-          background_data[activeBackground.collection][activeBackground.index]
-            .alt
-        }
-      />
-      {isDesktop && (
+    <div className="absolute inset-0 w-full h-[100vh] z-[-1]">
+      <div ref={imageContainerRef} className="relative w-full h-full grid grid-cols-1 md:grid-cols-2">
         <BGImage
-          src={background_data[activeBackground.collection][1].src}
-          alt={background_data[activeBackground.collection][1].alt}
+          src={background_data[collection][itemIndex].src}
+          alt={background_data[collection][itemIndex].alt}
+          className={`transition-opacity duration-1000`}
         />
-      )}
+        {isDesktop && (
+          <BGImage
+            src={background_data[collection][1].src}
+            alt={background_data[collection][1].alt}
+            className="transition-opacity duration-1000"
+          />
+        )}
+      </div>
     </div>
   );
 };

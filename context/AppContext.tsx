@@ -1,5 +1,6 @@
 "use client";
 
+import { getNextCollection } from "@/utils/getNextCollection";
 import React, {
   createContext,
   useContext,
@@ -58,11 +59,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
       isMobile: window.innerWidth <= 1047,
       isDesktop: window.innerWidth >= 1048,
     });
-
-    setActiveBackground({
-      collection: "yellow",
-      index: 0,
-    });
   };
 
   useEffect(() => {
@@ -70,45 +66,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
     window.addEventListener("resize", checkWidth);
     return () => window.removeEventListener("resize", checkWidth);
   }, []);
-
-  const getNextCollection = (prevCollection: string) => {
-    const collection =
-      prevCollection === "yellow"
-        ? "gray"
-        : prevCollection === "gray"
-        ? "black"
-        : prevCollection === "black"
-        ? "mixed"
-        : "yellow";
-
-    return collection;
-  };
-
-  useEffect(() => {
-    if (device.isDesktop) {
-      const interval = setInterval(() => {
-        setActiveBackground((prev) => {
-          const collection = getNextCollection(prev.collection);
-          return { collection, index: 0 };
-        });
-      }, 16000);
-
-      return () => clearInterval(interval);
-    } else {
-      const interval = setInterval(() => {
-        setActiveBackground((prev) => {
-          const index = prev.index === 1 ? 0 : prev.index + 1;
-          if (index === 0) {
-            const collection = getNextCollection(prev.collection);
-            return { collection, index };
-          }
-          return { ...prev, index };
-        });
-      }, 16000);
-
-      return () => clearInterval(interval);
-    }
-  }, [device.isDesktop]);
 
   const contextValue = useMemo(
     () => ({

@@ -10,7 +10,10 @@ const Content: React.FC = () => {
   return (
     <div className='flex flex-col gap-y-[20vh] lg:gap-y-[60px] text-center text-[#fff] w-full h-full justify-center'>
       <div className='flex flex-col gap-y-[12px] lg:gap-y-[0]'>
-        <h1 className='text-[48px] md:text-[64px] lg:text-[80px] tracking-[2px]'>Atelier Sob Medida</h1>
+        <h1 className={`font-thin text-nowrap`}
+        style={{
+          fontSize: "clamp(75px, 5vw, 90px)",
+        }}>Atelier Sob Medida</h1>
 
         <p className='text-[18px] md:text-[22px]'>
           Uma experiência única e personalizada{!isDesktop ? <br /> : ' '}
