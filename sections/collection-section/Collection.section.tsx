@@ -349,7 +349,7 @@ const Collection: React.FC = () => {
               alt={collections_data.noivas_viert.images[0].alt}
             />
           </div>
-          <div className="w-1/2 py-[7vh] md:py-[120px] pl-[55px] text-black">
+          <div className="w-1/2 py-[7vh] md:py-[14vh] pl-[55px] text-black">
             <TitleDescriptionBtn
               title={collections_data.noivas_viert.title}
               description={collections_data.noivas_viert.description}
@@ -362,7 +362,7 @@ const Collection: React.FC = () => {
 
         {/* FESTAS VIERT */}
         <div
-          className="relative text-black my-[20vh]"
+          className="relative text-black mt-[20vh] mb-[17.5vh]"
           style={{
             marginLeft: "18.2%",
             marginRight: "18.2%",
@@ -396,7 +396,7 @@ const Collection: React.FC = () => {
               />
             </div>
           </div>
-          <div className="flex relative gap-[37px] mt-[114px] ">
+          <div className="flex relative gap-[37px] mt-[10.5vh] ">
             <div
               className="p-2 relative w-[30%]"
               style={{
