@@ -164,7 +164,7 @@ const Collection: React.FC = () => {
             <CTA
               text={collections_data.festas_viert.cta.text}
               variant="secondary"
-              className="min-w-[180px] w-full text-[12px] text-nowrap"
+              className="w-full text-[12px] text-nowrap"
               onClick={() => {
                 navigateTo(collections_data.festas_viert.cta.link);
               }}
