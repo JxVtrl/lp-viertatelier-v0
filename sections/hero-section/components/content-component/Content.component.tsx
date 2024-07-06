@@ -12,7 +12,7 @@ const Content: React.FC = () => {
       <div className='flex flex-col gap-y-[12px] lg:gap-y-[0]'>
         <h1 className={`font-thin text-nowrap`}
         style={{
-          fontSize: "clamp(75px, 5vw, 90px)",
+          fontSize: isDesktop ? "clamp(75px, 5vw, 90px)" : "42px",
         }}>Atelier Sob Medida</h1>
 
         <p className='text-[18px] md:text-[22px]'>
