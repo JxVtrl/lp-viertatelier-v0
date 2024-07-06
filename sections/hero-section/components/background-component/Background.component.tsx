@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { background_data } from "@/data/background-data";
 import gsap from "gsap";
 import BGImage from "@/components/bgimage-component/BGImage.component";
+import { getNextCollection } from "@/utils/getNextCollection";
 
 const Background: React.FC = () => {
   const {
@@ -11,9 +12,9 @@ const Background: React.FC = () => {
       collection, // Variável para definir a coleção que está sendo exibida
       index: itemIndex, // Variável para definir o índice do item dentro da coleção
     },
+    setActiveBackground
   } = useApp();
 
-  const [nextIndex, setNextIndex] = useState((itemIndex + 1) % background_data[collection].length);
   const imageContainerRef = useRef<HTMLDivElement>(null);
 
   const fadeAnimation = useCallback(() => {
@@ -34,7 +35,10 @@ const Background: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setNextIndex((prevIndex) => (prevIndex + 1) % background_data[collection].length);
+      setActiveBackground({
+        collection: isDesktop ? getNextCollection(collection) : itemIndex === 1 ? getNextCollection(collection) : collection,
+        index: 0
+      })
     }, 5000);
 
     return () => clearInterval(interval);
