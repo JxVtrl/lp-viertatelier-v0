@@ -136,7 +136,8 @@ const Collection: React.FC = () => {
           grid-rows-2
           gap-[20px]
           mb-[5vh]
-          mt-[120px]
+          mt-[7vh]
+          md:mt-[120px]
           px-[20px]
           max-h-[800px]
           md:h-fit
@@ -249,7 +250,7 @@ const Collection: React.FC = () => {
             variant="secondary"
           />
           {/* LAST PHOTO BEFORE FOOTER */}
-          <div className="relative h-[360px] mt-[130px] w-screen">
+          <div className="relative h-[360px] mt-[7vh] md:mt-[120px] w-screen">
             <Image
               layout="fill"
               className="absolute bg-cover h-full object-cover bg-center"
@@ -348,7 +349,7 @@ const Collection: React.FC = () => {
               alt={collections_data.noivas_viert.images[0].alt}
             />
           </div>
-          <div className="w-1/2 py-[120px] pl-[55px] text-black">
+          <div className="w-1/2 py-[7vh] md:py-[120px] pl-[55px] text-black">
             <TitleDescriptionBtn
               title={collections_data.noivas_viert.title}
               description={collections_data.noivas_viert.description}
@@ -426,12 +427,11 @@ const Collection: React.FC = () => {
         </div>
 
         {/* TAYLOR CALL */}
-        <div className="text-black mt-[120px] container mx-auto flex flex-col gap-[82px] items-center justify-center">
+        <div className="text-black my-[7vh] md:my-[120px] container mx-auto flex flex-col gap-[82px] items-center justify-center">
           <p className="text-[30px]">{collections_data.taylor.description}</p>
-
           <CTA
             variant="secondary"
-            className="mb-[130px]"
+            className=""
             text={collections_data.taylor.cta.text}
             onClick={() => {
               navigateTo(collections_data.taylor.cta.link);
