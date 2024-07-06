@@ -1,3 +1,4 @@
+import MouseBlobity from "@/components/mouseblobity-component/MouseBlobity.component";
 import { AppProvider } from "@/context/AppContext";
 import {
   About,
@@ -12,7 +13,8 @@ export default function Home() {
       <Hero />
       <About />
       <Collection />
-      <Footer/>
+      <Footer />
+      <MouseBlobity/>
     </AppProvider>
   );
 }
