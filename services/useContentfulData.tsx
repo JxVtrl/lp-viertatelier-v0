@@ -1,14 +1,14 @@
 import { createClient } from "contentful";
 
-type Entry = {
-  contentType: "produtos";
-};
-
 type SingleEntryParams = {
   entryId: string;
 };
 
-export const getEntries = async ({ contentType }: Entry) => {
+export const getEntries = async ({
+  contentType,
+}: {
+  contentType: "produtos";
+}) => {
   const contentful = createClient({
     space: process.env.CONTENTFUL_SPACE_ID || "",
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || "",

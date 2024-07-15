@@ -1,7 +1,10 @@
 import { ProductCard } from "@/components/ProductCard-component";
+import { EntryProps } from "@/interfaces/contetfulData";
+import { getEntries } from "@/services/useContentfulData";
+import { treatProducts } from "@/utils/treatedData";
 import Head from "next/head";
 
-export default function FestasViert() {
+function FestasViert() {
   return (
     <div className="container mx-auto py-[137px] bg-white">
       <Head>
@@ -22,3 +25,25 @@ export default function FestasViert() {
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const [
+    allProducts
+  ] = await Promise.all([
+      getEntries({
+        contentType: "produtos",
+      }),
+    ]) as any
+
+  const products = treatProducts(allProducts);
+
+  return {
+    props: {
+      products
+    },
+    revalidate: 60 * 5, // 5 minutes
+  };
+};
+
+
+export default FestasViert
