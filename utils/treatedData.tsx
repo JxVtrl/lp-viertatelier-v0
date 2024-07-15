@@ -32,7 +32,6 @@ export const treatCustomers = (c: any[]) => {
 }
 
 export const treatProducts = (allProducts: EntryProps[]): Product[] => {
-  console.log(JSON.stringify(allProducts, null, 2));
 
   const treatedProducts = allProducts.map(entry => {
     return {
@@ -42,9 +41,11 @@ export const treatProducts = (allProducts: EntryProps[]): Product[] => {
       price: entry.fields.price,
       sizes: entry.fields.sizes as ("P" | "PP" | "M" | "G" | "GG")[],
       colors: entry.fields.colors,
-      images: entry.fields.images!.map(image => image.fields.file.url)
+      images: entry.fields.images!.map(image => 'https:'+image.fields.file.url)
     };
   });
+
+  console.log(JSON.stringify(treatedProducts, null, 2));
 
   return treatedProducts;
 };
