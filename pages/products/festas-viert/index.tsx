@@ -27,23 +27,22 @@ function FestasViert() {
 }
 
 export const getStaticProps = async () => {
-  const [
-    allProducts
-  ] = await Promise.all([
-      getEntries({
-        contentType: "produtos",
-      }),
-    ]) as any
+  const [allProducts] = (await Promise.all([
+    getEntries({
+      contentType: "produtos",
+    }),
+  ])) as any;
 
-  const products = treatProducts(allProducts);
+  const products = treatProducts(allProducts).filter(
+    (product) => product.collection === "Viert Festas"
+  );
 
   return {
     props: {
-      products
+      products,
     },
     revalidate: 60 * 5, // 5 minutes
   };
 };
 
-
-export default FestasViert
+export default FestasViert;
