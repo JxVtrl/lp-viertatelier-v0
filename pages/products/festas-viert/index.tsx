@@ -8,7 +8,7 @@ export default function FestasViert() {
         <title>Festas Viert</title>
         <meta name="description" content="Festas Viert" />
       </Head>
-      <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[41px] gap-y-[120px] md:gap-y-[23.61vh]">
+      <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[41px] gap-y-[120px] lg:gap-y-[23.61vh]">
         {Array.from({ length: 6 }).map((_, index) => (
           <ProductCard
             key={index}

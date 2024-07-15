@@ -22,13 +22,13 @@ export default function ProductCard({
   colors,
 }: ProductCardProps) {
   return (
-    <div className={`${inter.className} flex flex-col gap-3 `}>
-      <div className="relative md:w-[25.89vw] md:h-[66.85vh] bg-orange-300 md:max-h-[66.85vh] h-[502px] ">
+    <div className={`${inter.className} flex flex-col gap-5 `}>
+      <div className="relative lg:w-[25.89vw] lg:h-[66.85vh] lg:max-h-[66.85vh] h-[502px] ">
         <Image
           layout="fill"
           src={image}
           alt="Product"
-          className="object-cover bg-center"
+          className="object-cover bg-center w-full h-full"
         />
       </div>
       <div className="flex flex-col items-start">
