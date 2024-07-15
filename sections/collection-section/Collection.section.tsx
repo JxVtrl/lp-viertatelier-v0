@@ -250,7 +250,7 @@ const Collection: React.FC = () => {
             variant="secondary"
           />
           {/* LAST PHOTO BEFORE FOOTER */}
-          <div className="relative h-[360px] mt-[7vh] md:mt-[120px] w-screen">
+          <div className="relative h-[360px] mt-[7vh] md:mt-[120px] w-full">
             <Image
               layout="fill"
               className="absolute bg-cover h-full object-cover bg-center"
