@@ -96,7 +96,7 @@ const Background: React.FC<BackgroundProps> = ({imagePos='center'}) => {
               src={background_data[collection][1].src}
               alt={background_data[collection][1].alt}
               layout="fill"
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "cover", objectPosition: imagePos }}
               loading="eager"
             />
           </div>
