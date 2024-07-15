@@ -8,7 +8,7 @@ const Logo: React.FC = () => {
       className="relative max-w-[228px] max-h-[58px] w-full h-full"
       style={{ aspectRatio: 3.93 }}
     >
-      <Link href="/">
+      <Link href="/" className="w-full h-full flex">
         <Image src="/assets/brand/logo.png" alt="logo" layout="fill" />
       </Link>
     </div>
