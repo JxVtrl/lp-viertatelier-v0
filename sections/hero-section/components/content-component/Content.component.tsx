@@ -17,11 +17,11 @@ const Content: React.FC = () => {
 
         <p className='text-[18px] md:text-[22px]'>
           Uma experiência única e personalizada{!isDesktop ? <br /> : ' '}
-          exclusivamente para você.
+          criada exclusivamente para você.
         </p>
       </div>
 
-      <CTA text='Quero ver' mxAuto onClick={() => null} />
+      <CTA text='Descubra' mxAuto onClick={() => null} />
     </div>
   )
 }

@@ -39,7 +39,7 @@ export const collections_data = {
   festas_viert: {
     title: "Viert Festas",
     description:
-      "Para convidadas e madrinhas, com possibilidade de personalização completa através do sob medida ou escolhendo da nossa seleção exclusiva de prêt-à-porter.",
+      "Para convidadas e madrinhas, com possibilidade de personalização completa através do sob medida ou escolhendo da nossa seleção exclusiva de prêt-à-porter",
     images: [
       {
         src: "/assets/images/brown-dress.png",
@@ -65,7 +65,7 @@ export const collections_data = {
   },
   taylor: {
     description:
-      "Nosso atelier está aberto de segunda a sexta, das 10h às 19h, atendendo exclusivamente com hora marcada. ",
+      "Nosso atelier está aberto de segunda a sexta, das 10h às 19h, atendendo exclusivamente com hora marcada.",
     cta: {
       text: "Agendar Visita",
       link: "/taylor",
