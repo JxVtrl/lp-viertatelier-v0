@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div
-        className={`w-full flex justify-between lg:justify-center mt-[7vh] md:mt-[120px]`}
+        className={`w-full flex justify-between gap-1 lg:justify-center mt-[7vh] md:mt-[120px]`}
       >
         {footer_data.images.map((image, index) => (
           <div
@@ -44,10 +44,7 @@ const Footer: React.FC = () => {
             w-[200px]
             h-[200px]
             relative
-            mr-2
-            md:mr-[28px]
-            
-              `}
+            `}
           >
             <Image
               src={image.src}
