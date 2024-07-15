@@ -1,26 +1,26 @@
-import React from "react"
-import { footer_data } from "@/data/footer-data"
-import { midia_data } from "@/data/midia-data"
-import { useApp } from "@/context/AppContext"
-import localFont from "next/font/local"
-import Image from "next/image"
-import { Inter } from "next/font/google"
-import Link from "next/link"
+import React from "react";
+import { footer_data } from "@/data/footer-data";
+import { midia_data } from "@/data/midia-data";
+import { useApp } from "@/context/AppContext";
+import localFont from "next/font/local";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const canelaFont = localFont({
   src: "../../styles/fonts/canela/Canela-Regular.woff2",
-})
+});
 // import Canela font from Google Fonts
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-})
+});
 
 const Footer: React.FC = () => {
   const {
     device: { isMobile },
-  } = useApp()
+  } = useApp();
 
   return (
     <footer className="flex flex-col items-center justify-center text-black pt-[7vh] md:pt-[120px] font-normal bg-[#EFEFE9]">
@@ -41,7 +41,8 @@ const Footer: React.FC = () => {
           <div
             key={index}
             className={`
-            w-[200px]
+            w-[20vw]
+            max-w-[200px]
             h-[200px]
             relative
             `}
@@ -101,7 +102,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
