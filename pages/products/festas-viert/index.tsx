@@ -29,9 +29,9 @@ function FestasViert({ products }: { products: any }) {
           <ProductCard
             key={index}
             images={product.images}
-            name="Festa Viert"
-            price={1590}
-            colors={["Rosa", "Azul", "Amarelo"]}
+            name={product.name}
+            price={product.price}
+            colors={product.colors}
           />
         ))}
       </div>
