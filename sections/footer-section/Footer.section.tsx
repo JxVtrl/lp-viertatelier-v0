@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div
-        className={`w-full flex justify-between gap-1 lg:justify-center mt-[7vh] md:mt-[120px]`}
+        className={`lg:w-full flex justify-between gap-1 lg:justify-center mt-[7vh] md:mt-[120px]`}
       >
         {footer_data.images.map((image, index) => (
           <div
