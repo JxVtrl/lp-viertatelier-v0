@@ -23,7 +23,7 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <div className={`${inter.className} flex flex-col gap-5 `}>
-      <div className="relative lg:w-[25.89vw] lg:h-[66.85vh] lg:max-h-[66.85vh] h-[502px] ">
+      <div className="relative lg:w-[25.89vw] md:h-[66.85vh] lg:max-h-[66.85vh] min-h-[375px] ">
         <Image
           layout="fill"
           src={image}

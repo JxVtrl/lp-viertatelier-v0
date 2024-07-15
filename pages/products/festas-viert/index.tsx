@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export default function FestasViert() {
   return (
-    <div className="container mx-auto py-[137px] bg-white">
+    <div className="container mx-auto py-[137px] px-5 bg-white">
       <Head>
         <title>Festas Viert</title>
         <meta name="description" content="Festas Viert" />
