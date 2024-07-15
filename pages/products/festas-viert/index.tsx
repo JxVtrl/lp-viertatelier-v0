@@ -1,5 +1,6 @@
 import { ProductCard } from "@/components/ProductCard-component";
 import { EntryProps } from "@/interfaces/contetfulData";
+import { Hero } from "@/sections";
 import { getEntries } from "@/services/useContentfulData";
 import { treatProducts } from "@/utils/treatedData";
 import Head from "next/head";

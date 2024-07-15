@@ -1,3 +1,7 @@
+import MouseBlobity from "@/components/mouseblobity-component/MouseBlobity.component";
+import { SmoothScrolling } from "@/components/SmoothScrolling-component";
+import { AppProvider } from "@/context/AppContext";
+import { Footer, Hero } from "@/sections";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
@@ -69,9 +73,16 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* application name */}
         <meta name="application-name" content="Viert Atelier" />
       </Head>
-      <main className={`${montserrat.className} ${baskervville.className}`}>
-        <Component {...pageProps} />
-      </main>
+      <AppProvider>
+        <SmoothScrolling>
+          <main className={`${montserrat.className} ${baskervville.className}`}>
+            <Hero />
+            <Component {...pageProps} />
+            <Footer />
+            <MouseBlobity />
+          </main>
+        </SmoothScrolling>
+      </AppProvider>
     </>
   );
 }
