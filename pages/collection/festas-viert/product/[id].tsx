@@ -1,9 +1,23 @@
-import React from 'react';
+"use client";
 
-// import { Container } from './styles';
+import React from "react";
+
+import { useParams } from "next/navigation";
+import Head from "next/head";
 
 const Product: React.FC = () => {
-  return <div />;
-}
+  const params = useParams<{ id: string }>();
+
+  return (
+    <>
+      <Head>
+        <title>Festas Viert - Produto {params?.id}</title>
+      </Head>
+      <div>
+        <h1>Product {params?.id}</h1>
+      </div>
+    </>
+  );
+};
 
 export default Product;
