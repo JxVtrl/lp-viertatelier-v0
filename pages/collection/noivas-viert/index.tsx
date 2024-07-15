@@ -15,13 +15,13 @@ export interface Product {
   images: string[];
 }
 
-function FestasViert({ products }: { products: any }) {
+function NoivasViert({ products }: { products: any }) {
   console.log(products);
 
   return (
     <div className="container mx-auto py-[137px] px-5 bg-white">
       <Head>
-        <title>Festas Viert</title>
+        <title>Noivas Viert</title>
         <meta name="description" content="Festas Viert" />
       </Head>
       <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[41px] gap-y-[120px] lg:gap-y-[23.61vh]">
@@ -47,7 +47,7 @@ export const getStaticProps = async () => {
   ])) as any;
 
   const products = treatProducts(allProducts).filter(
-    (product) => product.collection === "Viert Festas"
+    (product) => product.collection === "Viert Noivas"
   );
 
   return {
@@ -58,4 +58,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default FestasViert;
+export default NoivasViert;
