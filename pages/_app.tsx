@@ -28,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
         {/* description */}
         <meta name="description" content="Em breve um novo site" />
+        <title>Viert Atelier</title>
 
         {/* keywords */}
         <meta
