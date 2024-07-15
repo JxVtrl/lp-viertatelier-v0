@@ -39,7 +39,7 @@ export const collections_data = {
   festas_viert: {
     title: "Viert Festas",
     description:
-      "Para convidadas e madrinhas, com possibilidade de personalização completa através do sob medida ou escolhendo da nossa seleção exclusiva de prêt-à-porter",
+      "Para convidadas e madrinhas, com possibilidade de personalização completa através do sob medida ou escolhendo da nossa seleção exclusiva de prêt-à-porter.",
     images: [
       {
         src: "/assets/images/brown-dress.png",
