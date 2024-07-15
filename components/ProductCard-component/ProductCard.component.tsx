@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Inter } from "next/font/google";
-import { Product } from "@/pages/products/festas-viert";
+import { Product } from "@/pages/collection/festas-viert";
 
 const inter = Inter({
   subsets: ["latin"],

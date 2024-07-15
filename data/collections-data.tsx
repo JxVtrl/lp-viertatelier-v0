@@ -32,7 +32,7 @@ export const collections_data = {
     ],
     cta: {
       text: "Conheça nossos vestidos",
-      link: "/noivas-viert",
+      link: "/collection/noivas-viert",
     },
   },
 
@@ -60,7 +60,7 @@ export const collections_data = {
     ],
     cta: {
       text: "Conheça nossos vestidos",
-      link: "/products/festas-viert",
+      link: "/collection/festas-viert",
     },
   },
   taylor: {
