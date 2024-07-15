@@ -12,6 +12,7 @@
     "@studio-freight/react-lenis": "^0.0.47",
     "aos": "^2.3.4",
     "blobity": "^0.2.3",
+    "contentful": "^10.12.8",
     "gsap": "^3.12.5",
     "lenis": "^1.1.6",
     "next": "14.2.3",

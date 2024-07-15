@@ -440,7 +440,7 @@ const Collection: React.FC = () => {
         </div>
 
         {/* LAST PHOTO BEFORE FOOTER */}
-        <div className="relative h-[64.17vh]  w-screen">
+        <div className="relative h-[64.17vh]  w-full">
           <Image
             quality={100}
             layout="fill"
