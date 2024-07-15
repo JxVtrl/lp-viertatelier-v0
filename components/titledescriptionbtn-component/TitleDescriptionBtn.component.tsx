@@ -1,18 +1,18 @@
-import React from "react"
-import localFont from "next/font/local"
-import CTA from "../cta-component/CTA.component"
-
+import React from "react";
+import localFont from "next/font/local";
+import CTA from "../cta-component/CTA.component";
+import styles from "./TitleDescriptionBtn.module.scss";
 type TitleDescriptionBtnProps = {
-  title: string | React.ReactNode
-  description: string
-  navigationLink: string
-  btnText: string
-  descrNeedsToFit: boolean
-}
+  title: string | React.ReactNode;
+  description: string;
+  navigationLink: string;
+  btnText: string;
+  descrNeedsToFit: boolean;
+};
 
 const canelaFont = localFont({
   src: "../../styles/fonts/canela/CanelaText-LightItalic-Trial.otf",
-})
+});
 
 const TitleDescriptionBtn: React.FC<TitleDescriptionBtnProps> = ({
   title,
@@ -22,21 +22,21 @@ const TitleDescriptionBtn: React.FC<TitleDescriptionBtnProps> = ({
   descrNeedsToFit,
 }) => {
   const navigateTo = (link: string) => {
-    window.location.href = link
-  }
+    window.location.href = link;
+  };
 
   return (
-    <div className='flex flex-col justify-between h-full gap-[7vh]'>
+    <div className="flex flex-col justify-between h-full gap-[7vh]">
       <div>
         <span
-          className={`font-thin text-nowrap  ${canelaFont.className}
-        text-[32px] md:text-[42px] lg:text-[54px]
+          className={`${styles.title}  ${canelaFont.className}
+        
 `}
         >
           {title}
         </span>
         <p
-          className={`mt-[3.70%] text-[14px] md:text-[18px] lg:text-[22px] ${
+          className={`mt-[3.70%] ${styles.text} ${
             descrNeedsToFit && "max-w-[80%]"
           }`}
         >
@@ -48,11 +48,11 @@ const TitleDescriptionBtn: React.FC<TitleDescriptionBtnProps> = ({
         variant="secondary"
         text={btnText}
         onClick={() => {
-          navigateTo(navigationLink)
+          navigateTo(navigationLink);
         }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default TitleDescriptionBtn
+export default TitleDescriptionBtn;

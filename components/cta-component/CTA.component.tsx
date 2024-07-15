@@ -23,7 +23,7 @@ const CTA: React.FC<CTAProps> = ({
     <button
       className={`
       ${variant === "primary" ? primaryVariant : secondaryVariant}
-      font-bold py-[16px] md:py-[24px] px-4 rounded
+      font-bold py-[1.48vh] md:py-[2.22vh] px-[3.33vw] rounded
       transition duration-300 ease-in-out
       w-full
       max-w-[250px]

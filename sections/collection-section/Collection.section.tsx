@@ -6,7 +6,7 @@ import Image from "next/image";
 import React from "react";
 
 import localFont from "next/font/local";
-
+import styles from "./Collection.module.scss";
 const canelaFont = localFont({
   src: "../../styles/fonts/canela/CanelaText-LightItalic-Trial.otf",
 });
@@ -231,15 +231,7 @@ const Collection: React.FC = () => {
           mx-auto
         "
         >
-          <p
-            className="
-            text-black
-            text-center
-            max-w-[80%]
-            mx-auto
-            mb-[5vh]
-          "
-          >
+          <p className={styles.taylorText + " max-w-[80%] mb-[5vh]"}>
             {collections_data.taylor.description}
           </p>
           <CTA
@@ -308,12 +300,12 @@ const Collection: React.FC = () => {
             }}
           >
             <div className="text-black">
-              <h1
-                className={`${canelaFont.className} text-black text-[75px] w-full text-nowrap`}
-              >
+              <h1 className={`${canelaFont.className} ${styles.title}`}>
                 {collections_data.atelier_viert.title}
               </h1>
-              <p className="text-[18px] md:text-[22px]">{collections_data.atelier_viert.description}</p>
+              <p className={styles.text}>
+                {collections_data.atelier_viert.description}
+              </p>
             </div>
 
             <div
@@ -428,7 +420,9 @@ const Collection: React.FC = () => {
 
         {/* TAYLOR CALL */}
         <div className="text-black my-[7vh] md:my-[120px] container mx-auto flex flex-col gap-[82px] items-center justify-center">
-          <p className="text-[30px]">{collections_data.taylor.description}</p>
+          <p className={styles.taylorText}>
+            {collections_data.taylor.description}
+          </p>
           <CTA
             variant="secondary"
             className=""
