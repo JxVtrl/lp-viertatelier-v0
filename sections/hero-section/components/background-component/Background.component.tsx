@@ -6,7 +6,12 @@ import BGImage from "@/components/bgimage-component/BGImage.component"
 import { getNextCollection } from "@/utils/getNextCollection"
 import Image from "next/image"
 
-const Background: React.FC = () => {
+
+type BackgroundProps = {
+  imagePos: 'center' | 'top' 
+}
+
+const Background: React.FC<BackgroundProps> = ({imagePos='center'}) => {
   const {
     device: { isDesktop },
     activeBackground: {
@@ -66,7 +71,7 @@ const Background: React.FC = () => {
   }, [collection, itemIndex, setActiveBackground, isDesktop])
 
   return (
-    <div className="absolute inset-0 w-full h-[100vh] z-[-1]">
+    <div className="absolute inset-0 w-full h-full z-[-1]">
       <div
         ref={imageContainerRef}
         className="relative w-full h-full grid grid-cols-1 lg:grid-cols-2"
@@ -77,7 +82,7 @@ const Background: React.FC = () => {
             src={background_data[collection][itemIndex].src}
             alt={background_data[collection][itemIndex].alt}
             layout="fill"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", objectPosition: imagePos }}
             loading="eager"
           />
         </div>
