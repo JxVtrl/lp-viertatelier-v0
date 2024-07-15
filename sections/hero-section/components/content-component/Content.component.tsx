@@ -17,7 +17,7 @@ const Content: React.FC = () => {
           Atelier Sob Medida
         </h1>
 
-        <p className="text-[18px] md:text-[22px]">
+        <p className={styles.text}>
           Uma experiência única e personalizada{!isDesktop ? <br /> : " "}
           criada exclusivamente para você.
         </p>
