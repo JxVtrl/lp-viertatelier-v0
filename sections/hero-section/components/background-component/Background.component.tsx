@@ -69,7 +69,7 @@ const Background: React.FC = () => {
     <div className="absolute inset-0 w-full h-[100vh] z-[-1]">
       <div
         ref={imageContainerRef}
-        className="relative w-full h-full grid grid-cols-1 md:grid-cols-2"
+        className="relative w-full h-full grid grid-cols-1 lg:grid-cols-2"
       >
         <div className={`relative w-full h-full`}>
           <Image
