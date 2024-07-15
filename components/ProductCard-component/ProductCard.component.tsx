@@ -1,32 +1,20 @@
 import Image from "next/image";
 
 import { Inter } from "next/font/google";
+import { Product } from "@/pages/products/festas-viert";
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-type ProductCardProps = {
-  image: string;
-  name: string;
-  price: string;
-  /* colors: string[]; Puxar pela quantidade de strings */
-  colors: string[];
-};
-
-export default function ProductCard({
-  image,
-  name,
-  price,
-  colors,
-}: ProductCardProps) {
+export default function ProductCard({ images, name, price, colors }: Product) {
   return (
     <div className={`${inter.className} flex flex-col gap-5 `}>
       <div className="relative lg:w-[25.89vw] md:h-[66.85vh] lg:max-h-[66.85vh] min-h-[375px] ">
         <Image
           layout="fill"
-          src={image}
+          src={images[0]}
           alt="Product"
           className="object-cover bg-center w-full h-full"
         />
