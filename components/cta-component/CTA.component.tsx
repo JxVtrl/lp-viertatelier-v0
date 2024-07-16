@@ -55,6 +55,9 @@ const CTA: React.FC<CTAProps> = ({
       md:max-w-[350px]
       ${mxAuto && "mx-auto"}
       uppercase
+      flex
+      justify-center
+      items-center
       ${className}
       `}
         onClick={onClick}
