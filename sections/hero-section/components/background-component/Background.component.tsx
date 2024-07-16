@@ -1,77 +1,61 @@
-import { useApp } from "@/context/AppContext"
-import React, { useCallback, useEffect, useRef, useState } from "react"
-import { background_data } from "@/data/background-data"
-import gsap from "gsap"
-import BGImage from "@/components/bgimage-component/BGImage.component"
-import { getNextCollection } from "@/utils/getNextCollection"
-import Image from "next/image"
-
+import { useApp } from "@/context/AppContext";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { background_data } from "@/data/background-data";
+import { getNextCollection } from "@/utils/getNextCollection";
+import gsap from "gsap";
+import Image from "next/image";
 
 type BackgroundProps = {
-  imagePos: 'center' | 'top' 
-}
+  imagePos: "center" | "top";
+};
 
-const Background: React.FC<BackgroundProps> = ({imagePos='center'}) => {
+const Background: React.FC<BackgroundProps> = ({ imagePos = "center" }) => {
   const {
     device: { isDesktop },
-    activeBackground: {
-      collection, // Variável para definir a coleção que está sendo exibida
-      index: itemIndex, // Variável para definir o índice do item dentro da coleção
-    },
+    activeBackground: { collection, index: itemIndex },
     setActiveBackground,
-  } = useApp()
+  } = useApp();
 
-  const imageContainerRef = useRef<HTMLDivElement>(null)
+  const imageContainerRef = useRef<HTMLDivElement>(null);
+  const [nextIndex, setNextIndex] = useState(1); // Track the next index for desktop view
 
   const fadeAnimation = useCallback(() => {
     if (imageContainerRef.current) {
-      gsap.fromTo(
-        imageContainerRef.current,
-        { opacity: 1 },
-        { opacity: 0, duration: 1, ease: "power1.inOut" }
-      )
-      gsap.fromTo(
-        imageContainerRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 1, ease: "power1.inOut" }
-      )
+      gsap.to(imageContainerRef.current, {
+        opacity: 0,
+        duration: 1,
+        ease: "power1.inOut",
+        onComplete: () => {
+          setActiveBackground((prev) => ({
+            collection: getNextCollection(prev.collection),
+            index: prev.index === 0 ? 1 : 0,
+          }));
+          gsap.to(imageContainerRef.current, {
+            opacity: 1,
+            duration: 1,
+            ease: "power1.inOut",
+          });
+        },
+      });
     }
-  }, [])
-
-  useEffect(() => {
-    if (imageContainerRef.current) {
-      fadeAnimation()
-    }
-  }, [collection, itemIndex])
+  }, [setActiveBackground]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (!isDesktop) {
-        // check if index is 1
-        if (itemIndex === 1) {
-          setActiveBackground({
-            collection: getNextCollection(collection),
-            index: 0,
-          })
-        } else {
-          setActiveBackground({
-            collection,
-            index: 1,
-          })
-        }
-      } else {
-        setActiveBackground({
-          collection: getNextCollection(collection),
-          index: 0,
-        })
-      }
-    }, 5000)
+      fadeAnimation();
+    }, 6500);
 
-    return () => clearInterval(interval)
-  }, [collection, itemIndex, setActiveBackground, isDesktop])
+    return () => clearInterval(interval);
+  }, [fadeAnimation]);
+
+  useEffect(() => {
+    if (isDesktop) {
+      setNextIndex((itemIndex + 1) % background_data[collection].length);
+    }
+  }, [collection, itemIndex, isDesktop]);
 
   return (
-    <div className="absolute inset-0 w-full h-full z-[-1]">
+    <div className="absolute inset-0 w-full h-full z-[-1] bg-black">
       <div
         ref={imageContainerRef}
         className="relative w-full h-full grid grid-cols-1 lg:grid-cols-2"
@@ -79,8 +63,8 @@ const Background: React.FC<BackgroundProps> = ({imagePos='center'}) => {
         <div className={`relative w-full h-full`}>
           <Image
             key={`${collection}-${itemIndex}`}
-            src={background_data[collection][itemIndex].src}
-            alt={background_data[collection][itemIndex].alt}
+            src={background_data[collection][isDesktop ? 0 : itemIndex].src}
+            alt={background_data[collection][isDesktop ? 0 : itemIndex].alt}
             layout="fill"
             style={{ objectFit: "cover", objectPosition: imagePos }}
             loading="eager"
@@ -103,7 +87,7 @@ const Background: React.FC<BackgroundProps> = ({imagePos='center'}) => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Background
+export default Background;
