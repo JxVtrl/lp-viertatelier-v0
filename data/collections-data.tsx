@@ -16,7 +16,7 @@ export const collections_data = {
     ],
     cta: {
       text: "Saiba Mais",
-      link: "/atelier-viert",
+      link: "https://wa.me/5521974575663?text=Ol%C3%A1!%20Poderia%20me%20contar%20mais%20sobre%20os%20vestidos%20de%20noiva%20e%20festa%3F%20Estou%20interessada!",
     },
   },
   noivas_viert: {
@@ -68,7 +68,7 @@ export const collections_data = {
       "Nosso atelier está aberto de segunda a sexta, das 10h às 19h, atendendo exclusivamente com hora marcada.",
     cta: {
       text: "Agendar Visita",
-      link: "/taylor",
+      link: "https://wa.me/5521974575663?text=Ol%C3%A1!%20Estou%20interessado(a)%20em%20agendar%20uma%20visita%20ao%20atelier.%20Podemos%20combinar%20um%20hor%C3%A1rio%3F",
     },
   },
 };
