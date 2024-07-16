@@ -1,10 +1,5 @@
-import { About, Collection } from "@/sections";
+import { Collection } from "@/sections";
 
 export default function Home() {
-  return (
-    <>
-      <About />
-      <Collection />
-    </>
-  );
+  return <Collection />;
 }

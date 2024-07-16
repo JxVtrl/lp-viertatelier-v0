@@ -23,7 +23,7 @@ const Collection: React.FC = () => {
     mobile: (
       <>
         {/* ATELIER VIERT */}
-        <div className="h-fit  flex flex-col gap-[48px] pt-[10vh] pb-[7vh]">
+        <div className="h-fit  flex flex-col gap-[48px] pt-[10vh] pb-[7vh]" id='about'>
           <div className="grid  grid-cols-2 gap-[16px] px-[24px]">
             <div
               className="relative"
@@ -90,7 +90,7 @@ const Collection: React.FC = () => {
         </div>
 
         {/* NOIVAS VIERT */}
-        <div className="bg-[#EFEFE9] pb-[7vh] flex flex-col gap-[5vh]">
+        <div className="bg-[#EFEFE9] pb-[7vh] flex flex-col gap-[5vh]" id='collections'>
           <div
             className="relative flex flex-col h-full w-full items-center justify-center"
             style={{
@@ -262,6 +262,7 @@ const Collection: React.FC = () => {
             paddingLeft: "18.2%",
             paddingRight: "18.2%",
           }}
+          id='about'
         >
           <div
             className="w-full flex flex-col max-w-[50%]"
@@ -326,7 +327,7 @@ const Collection: React.FC = () => {
         </div>
 
         {/* NOIVAS VIERT */}
-        <div className="flex bg-[#EFEFE9] mt-[20vh] h-[79.90vh]">
+        <div className="flex bg-[#EFEFE9] mt-[20vh] h-[79.90vh]" id='collections'>
           <div
             style={{
               aspectRatio: 1.9,

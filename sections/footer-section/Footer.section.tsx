@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
   } = useApp();
 
   return (
-    <footer className="flex flex-col items-center justify-center text-black pt-[7vh] md:pt-[120px] font-normal bg-[#EFEFE9]">
+    <footer className="flex flex-col items-center justify-center text-black pt-[7vh] md:pt-[120px] font-normal bg-[#EFEFE9]" id='contact'>
       <div className={`flex flex-col items-center`}>
         <div
           className={`text-[17px] md:text-[21px] uppercase ${inter.className}`}
