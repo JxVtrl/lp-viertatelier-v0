@@ -24,7 +24,7 @@ function FestasViert({ products }: { products: any }) {
         <title>Festas Viert</title>
         <meta name="description" content="Festas Viert" />
       </Head>
-      <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[2.14vw] gap-y-[120px] lg:gap-y-[23.61vh]">
+      <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[2.14vw] gap-y-[4.17vh] lg:gap-y-[23.61vh]">
         {products.map((product: Product, index: number) => (
           <Link href={`/collection/festas-viert/product/${product.entryId}`} key={index}>
             <ProductCard

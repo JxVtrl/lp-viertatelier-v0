@@ -8,7 +8,10 @@ const Navigation: React.FC = () => {
       <ul className={styles.list}>
         {navigation_data.map((navigation) => (
           <li key={navigation.id}>
-            <a className="uppercase text-white" href={navigation.url}>
+            <a
+              className="uppercase text-white"
+              href={navigation.url}
+            >
               {navigation.title}
             </a>
           </li>
