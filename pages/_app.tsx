@@ -1,4 +1,5 @@
 import MouseBlobity from "@/components/mouseblobity-component/MouseBlobity.component";
+import PageTransition from "@/components/pagetransition-component/PageTransitions.component";
 import { SmoothScrolling } from "@/components/SmoothScrolling-component";
 import { AppProvider } from "@/context/AppContext";
 import { Footer, Hero } from "@/sections";
@@ -74,14 +75,18 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="application-name" content="Viert Atelier" />
       </Head>
       <AppProvider>
-        <SmoothScrolling>
-          <main className={`${montserrat.className} ${baskervville.className}`}>
-            <Hero />
-            <Component {...pageProps} />
-            <Footer />
-            <MouseBlobity />
-          </main>
-        </SmoothScrolling>
+        <PageTransition>
+          <SmoothScrolling>
+            <main
+              className={`${montserrat.className} ${baskervville.className}`}
+            >
+              <Hero />
+              <Component {...pageProps} />
+              <Footer />
+              <MouseBlobity />
+            </main>
+          </SmoothScrolling>
+        </PageTransition>
       </AppProvider>
     </>
   );
