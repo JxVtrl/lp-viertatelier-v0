@@ -1,0 +1,17 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    height: 121.56vh;
+
+
+    @media (min-width: 1024px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 188.43vh;
+
+    }
+
+
+
+
+}

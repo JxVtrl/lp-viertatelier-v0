@@ -15,11 +15,9 @@ const Product: React.FC = () => {
   } = useRouter();
 
   const getProductName = async () => {
-    console.log('aqui')
     if(!entryId || Array.isArray(entryId)) return
     const product = await getSingleEntry({ entryId })
     const treatedProduct = treatProduct(product as any)
-    console.log(treatedProduct)
     setName(treatedProduct.name)
   }
 

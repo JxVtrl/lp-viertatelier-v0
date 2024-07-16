@@ -44,8 +44,6 @@ export const treatProduct = (products: EntryProps): Product => {
     entryId: products.sys.id,
   };
 
-  console.log(JSON.stringify(treatedProducts, null, 2));
-
   return treatedProducts;
 };
 
@@ -64,8 +62,6 @@ export const treatProducts = (allProducts: EntryProps[]): Product[] => {
       entryId: entry.sys.id,
     };
   });
-
-  console.log(JSON.stringify(treatedProducts, null, 2));
 
   return treatedProducts;
 };

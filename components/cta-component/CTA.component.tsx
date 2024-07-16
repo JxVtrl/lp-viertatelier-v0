@@ -18,50 +18,30 @@ const CTA: React.FC<CTAProps> = ({
   mxAuto = false,
 }) => {
   const primaryVariant = "text-white border border-white ";
-
   const secondaryVariant = "text-black border border-black";
 
-  if (href) {
-    return (
-      <a
-        className={`
+  const container_className = `
         ${variant === "primary" ? primaryVariant : secondaryVariant}
         font-bold py-[1.48vh] md:py-[2.22vh] px-[3.33vw] rounded
         transition duration-300 ease-in-out
-        items-center
-        justify-center
-        flex
       w-full
+      flex 
+      justify-center items-center
       max-w-[250px]
       md:max-w-[350px]
       ${mxAuto && "mx-auto"}
       uppercase
-      ${className}
-      `}
-        href={href}
-      >
+      ${className}`;
+
+  if (href) {
+    return (
+      <a className={container_className} href={href}>
         <span className="text-wrap">{text}</span>
       </a>
     );
   } else {
     return (
-      <button
-        className={`
-        ${variant === "primary" ? primaryVariant : secondaryVariant}
-        font-bold py-[1.48vh] md:py-[2.22vh] px-[3.33vw] rounded
-        transition duration-300 ease-in-out
-      w-full
-      max-w-[250px]
-      md:max-w-[350px]
-      ${mxAuto && "mx-auto"}
-      uppercase
-      flex
-      justify-center
-      items-center
-      ${className}
-      `}
-        onClick={onClick}
-      >
+      <button className={container_className} onClick={onClick}>
         <span className="text-wrap">{text}</span>
       </button>
     );
