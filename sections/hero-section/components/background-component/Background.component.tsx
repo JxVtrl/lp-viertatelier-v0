@@ -23,6 +23,7 @@ const Background: React.FC<BackgroundProps> = ({ imagePos = "center" }) => {
     if (imageContainerRef.current) {
       gsap.to(imageContainerRef.current, {
         opacity: 0,
+        filter: "blur(10px)",
         duration: 1,
         ease: "power1.inOut",
         onComplete: () => {
@@ -32,6 +33,7 @@ const Background: React.FC<BackgroundProps> = ({ imagePos = "center" }) => {
           }));
           gsap.to(imageContainerRef.current, {
             opacity: 1,
+            filter: "blur(0px)",
             duration: 1,
             ease: "power1.inOut",
           });
