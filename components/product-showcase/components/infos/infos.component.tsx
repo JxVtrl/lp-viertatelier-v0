@@ -18,7 +18,7 @@ const Infos: React.FC<InfosProps> = ({
   console.log({ colors, description, name, price, sizes });
   return (
     <div
-      className="lg:pt-[19.54vh] lg:pl-[5.99vw] px-[9.01vw] pt-[7.14vh] lg:px-[unset] lg:pt-[unset]
+      className="lg:pt-[19.54vh] lg:pl-[5.99vw] px-[9.01vw] pt-[5vh] lg:px-[unset] lg:pt-[unset]
     "
     >
       <div className="mb-[3.75vh] lg:mb-[8.7vh]">
