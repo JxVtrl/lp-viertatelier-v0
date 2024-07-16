@@ -28,6 +28,9 @@ const CTA: React.FC<CTAProps> = ({
         ${variant === "primary" ? primaryVariant : secondaryVariant}
         font-bold py-[1.48vh] md:py-[2.22vh] px-[3.33vw] rounded
         transition duration-300 ease-in-out
+        items-center
+        justify-center
+        flex
       w-full
       max-w-[250px]
       md:max-w-[350px]
