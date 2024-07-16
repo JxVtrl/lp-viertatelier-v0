@@ -4,6 +4,7 @@ import { Hero } from "@/sections";
 import { getEntries } from "@/services/useContentfulData";
 import { treatProducts } from "@/utils/treatedData";
 import Head from "next/head";
+import Link from "next/link";
 
 export interface Product {
   collection?: string;
@@ -13,6 +14,7 @@ export interface Product {
   sizes?: string[];
   colors: string[];
   images: string[];
+  entryId: string | string[] | undefined
 }
 
 function NoivasViert({ products }: { products: any }) {
@@ -26,13 +28,18 @@ function NoivasViert({ products }: { products: any }) {
       </Head>
       <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[41px] gap-y-[120px] lg:gap-y-[23.61vh]">
         {products.map((product: Product, index: number) => (
-          <ProductCard
+          <Link
+            href={`/collection/noivas-viert/product/${product.entryId}`}
             key={index}
-            images={product.images}
-            name={product.name}
-            price={product.price}
-            colors={product.colors}
-          />
+          >
+            <ProductCard
+              key={index}
+              images={product.images}
+              name={product.name}
+              price={product.price}
+              colors={product.colors}
+            />
+          </Link>
         ))}
       </div>
     </div>

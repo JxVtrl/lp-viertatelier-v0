@@ -14,6 +14,7 @@ export interface Product {
   sizes?: string[];
   colors: string[];
   images: string[];
+  entryId?: string | string[] | undefined
 }
 
 function FestasViert({ products }: { products: any }) {
@@ -27,7 +28,7 @@ function FestasViert({ products }: { products: any }) {
       </Head>
       <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[41px] gap-y-[120px] lg:gap-y-[23.61vh]">
         {products.map((product: Product, index: number) => (
-          <Link href={`/collection/festas-viert/product/${index}`} key={index}>
+          <Link href={`/collection/festas-viert/product/${product.entryId}`} key={index}>
             <ProductCard
               key={index}
               images={product.images}

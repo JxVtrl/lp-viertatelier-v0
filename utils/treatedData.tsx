@@ -41,7 +41,8 @@ export const treatProducts = (allProducts: EntryProps[]): Product[] => {
       price: entry.fields.price,
       sizes: entry.fields.sizes as ("P" | "PP" | "M" | "G" | "GG")[],
       colors: entry.fields.colors,
-      images: entry.fields.images!.map(image => 'https:'+image.fields.file.url)
+      images: entry.fields.images!.map(image => 'https:' + image.fields.file.url),
+      entryId: entry.sys.id
     };
   });
 

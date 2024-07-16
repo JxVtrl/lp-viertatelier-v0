@@ -2,21 +2,23 @@
 
 import React from "react";
 
-import { useParams } from "next/navigation";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { ProductShowcase } from "@/components/product-showcase";
 
 const Product: React.FC = () => {
-  const {query:{id}} = useRouter()
+  const {
+    query: { entryId },
+  } = useRouter();
 
   return (
     <>
       <Head>
-        <title>Noivas Viert - Produto {id}</title>
+        <title>Noivas Viert - Produto {entryId}</title>
       </Head>
 
       <div>
-        <h1>Product {id}</h1>
+        <ProductShowcase entryId={entryId} />
       </div>
     </>
   );

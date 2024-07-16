@@ -44,8 +44,9 @@ const CTA: React.FC<CTAProps> = ({
       </a>
     );
   } else {
-    <button
-      className={`
+    return (
+      <button
+        className={`
         ${variant === "primary" ? primaryVariant : secondaryVariant}
         font-bold py-[1.48vh] md:py-[2.22vh] px-[3.33vw] rounded
         transition duration-300 ease-in-out
@@ -56,10 +57,11 @@ const CTA: React.FC<CTAProps> = ({
       uppercase
       ${className}
       `}
-      onClick={onClick}
-    >
-      <span className="text-wrap">{text}</span>
-    </button>;
+        onClick={onClick}
+      >
+        <span className="text-wrap">{text}</span>
+      </button>
+    );
   }
 };
 

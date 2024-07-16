@@ -22,6 +22,8 @@ const Hero: React.FC = () => {
   const isDefaultBg = title === "Atelier Sob Medida";
 
   useEffect(() => {
+    if (!pathname) return;
+
     if (pathname.includes("festa")) {
       setTitle(changeText("Viert Festas"));
     } else if (pathname.includes("noivas")) {
