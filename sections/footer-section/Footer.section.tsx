@@ -61,24 +61,23 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div
-          className={`lg:w-full flex justify-between gap-1 lg:justify-center mt-[7vh] md:mt-[120px]`}
+          className={`lg:w-full flex justify-between gap-[1.46vw] lg:justify-center mt-[7vh] md:mt-[120px]`}
         >
           {footer_data.images.map((image, index) => (
             <div
               key={index}
               className={`
-            w-[20vw]
-            max-w-[200px]
-            h-[200px]
+                w-[23.43vw]
+              lg:w-[17.19vw]
             relative
             `}
+              style={{ aspectRatio: 0.868 }}
             >
               <Image
                 src={image.src}
                 alt={image.alt}
                 layout="fill"
-                className={`w-full max-w-[252px] max-h-[294px] h-full
-                absolute object-cover bg-center mx-2 `}
+                className={`w-full h-full absolute object-cover bg-center`}
               />
             </div>
           ))}

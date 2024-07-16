@@ -19,12 +19,12 @@ export interface Product {
 
 function FestasViert({ products }: { products: any }) {
   return (
-    <div className="container mx-auto py-[137px] px-5 bg-white">
+    <div className="container mx-auto pt-[5.47vh] pb-[4.22vh] lg:pb-[12.69vh] px-[2.04vw] bg-white">
       <Head>
         <title>Festas Viert</title>
         <meta name="description" content="Festas Viert" />
       </Head>
-      <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[41px] gap-y-[120px] lg:gap-y-[23.61vh]">
+      <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[2.14vw] gap-y-[120px] lg:gap-y-[23.61vh]">
         {products.map((product: Product, index: number) => (
           <Link href={`/collection/festas-viert/product/${product.entryId}`} key={index}>
             <ProductCard

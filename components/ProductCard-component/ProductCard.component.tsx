@@ -11,12 +11,14 @@ const inter = Inter({
 export default function ProductCard({ images, name, price, colors }: Product) {
   return (
     <div className={`${inter.className} flex flex-col gap-5 `}>
-      <div className="relative lg:w-[25.89vw] md:h-[66.85vh] lg:max-h-[66.85vh] min-h-[375px] ">
+      <div className="relative w-full" style={{
+        aspectRatio: 0.688
+      }}>
         <Image
           layout="fill"
           src={images[0]}
           alt="Product"
-          className="object-cover bg-center w-full h-full"
+          className="object-cover bg-center"
         />
       </div>
       <div className="flex flex-col items-start">
