@@ -2,12 +2,13 @@
   font-weight: 300;
   font-size: calc(24px + (40 - 24) * ((100vw - 1024px) / (1920 - 1024)));
 
-  margin-bottom: 3.2vh;
+  margin-bottom: 1.5vh;
   text-transform: uppercase;
   letter-spacing: 10%;
 
   @media (max-width: 1024px) {
     font-size: 24px;
+    margin-bottom: 0.3vh;
   }
 }
 
@@ -16,10 +17,11 @@
   font-size: calc(16px + (30 - 16) * ((100vw - 1024px) / (1920 - 1024)));
   letter-spacing: 10%;
   text-transform: uppercase;
-  margin-bottom: 1.3vh;
+  margin-bottom: 0.25vh;
 
   @media (max-width: 1024px) {
     font-size: 16px;
+    margin-bottom: 0.2vh;
   }
 }
 
@@ -28,10 +30,34 @@
   font-size: calc(12px + (20 - 12) * ((100vw - 1024px) / (1920 - 1024)));
   letter-spacing: 10%;
 
-  margin-bottom: 1.76vh;
-
   @media (max-width: 1024px) {
     font-size: 12px;
+  }
+}
+
+.sizes {
+  margin-top: 3vh;
+  display: flex;
+  gap: 10px;
+
+
+   @media (max-width: 1024px) {
+    margin-top: 1.5vh;
+  gap: 1vw;
+
+  }
+  > div {
+    width: 2.6vw;
+    aspect-ratio: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1024px) {
+      width: 4.63vw;
+      font-size: 12px;
+    }
   }
 }
 

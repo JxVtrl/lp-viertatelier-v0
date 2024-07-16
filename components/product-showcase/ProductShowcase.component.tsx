@@ -16,12 +16,13 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ entryId }) => {
     if (!entryId || Array.isArray(entryId)) return;
     const prod = await getSingleEntry({ entryId });
     const treatedProd = treatProduct(prod as any);
+    console.log(treatedProd)
     setProduct(treatedProd);
   }, [entryId]);
 
   useEffect(() => {
     getProduct();
-  }, []);
+  }, [getProduct]);
 
   if (product)
     return (

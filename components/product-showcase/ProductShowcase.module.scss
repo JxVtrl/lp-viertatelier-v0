@@ -1,17 +1,13 @@
 .product {
-    display: flex;
-    flex-direction: column;
-    height: 121.56vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 7.15vh;
+  padding-bottom: 13.54vh;
 
-
-    @media (min-width: 1024px){
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        height: 188.43vh;
-
-    }
-
-
-
-
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 12.69vh;
+    padding-bottom: 15.65vh;
+  }
 }

@@ -17,7 +17,10 @@ const Infos: React.FC<InfosProps> = ({
 }) => {
   console.log({ colors, description, name, price, sizes });
   return (
-    <div className="lg:pt-[19.54vh] lg:pl-[5.99vw]">
+    <div
+      className="lg:pt-[19.54vh] lg:pl-[5.99vw] px-[9.01vw] pt-[7.14vh] lg:px-[unset] lg:pt-[unset]
+    "
+    >
       <div className="mb-[3.75vh] lg:mb-[8.7vh]">
         <h3 className={`${inter.className} ${styles.name}`}>{name}</h3>
         <h4 className={`${inter.className} ${styles.price}`}>R$ {price}</h4>
@@ -25,7 +28,11 @@ const Infos: React.FC<InfosProps> = ({
           <small>{colors?.length + 1} cores</small>
         </span>
 
-        <div>{sizes}</div>
+        <div className={styles.sizes}>
+          {sizes.map((size, index) => {
+            return <div key={index}>{size}</div>;
+          })}
+        </div>
       </div>
 
       <div>
