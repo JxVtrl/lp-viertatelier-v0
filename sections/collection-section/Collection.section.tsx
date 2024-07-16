@@ -239,15 +239,6 @@ const Collection: React.FC = () => {
             text={collections_data.taylor.cta.text}
             variant="secondary"
           />
-          {/* LAST PHOTO BEFORE FOOTER */}
-          <div className="relative h-[360px] mt-[7vh] md:mt-[120px] w-full">
-            <Image
-              layout="fill"
-              className="absolute bg-cover h-full object-cover bg-center"
-              src={collections_data.festas_viert.images[3].src}
-              alt={collections_data.festas_viert.images[3].alt}
-            />
-          </div>
         </div>
       </>
     ),
@@ -428,17 +419,6 @@ const Collection: React.FC = () => {
             className=""
             text={collections_data.taylor.cta.text}
             href={collections_data.taylor.cta.link}
-          />
-        </div>
-
-        {/* LAST PHOTO BEFORE FOOTER */}
-        <div className="relative h-[64.17vh]  w-full">
-          <Image
-            quality={100}
-            layout="fill"
-            className="absolute bg-cover  h-full object-cover bg-top"
-            src={collections_data.festas_viert.images[3].src}
-            alt={collections_data.festas_viert.images[3].alt}
           />
         </div>
       </>
