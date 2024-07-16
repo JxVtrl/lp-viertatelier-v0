@@ -2,19 +2,21 @@
 
 import React from "react";
 
-import { useParams } from "next/navigation";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Product: React.FC = () => {
-  const params = useParams<{ id: string }>();
+  const {
+    query: { id },
+  } = useRouter();
 
   return (
     <>
       <Head>
-        <title>Festas Viert - Produto {params?.id}</title>
+        <title>Festas Viert - Produto {id}</title>
       </Head>
       <div>
-        <h1>Product {params?.id}</h1>
+        <h1>Product {id}</h1>
       </div>
     </>
   );
