@@ -17,8 +17,8 @@ const Infos: React.FC<InfosProps> = ({
 }) => {
   console.log({ colors, description, name, price, sizes });
   return (
-    <div>
-      <div>
+    <div className="lg:pt-[19.54vh] lg:pl-[5.99vw]">
+      <div className="mb-[3.75vh] lg:mb-[8.7vh]">
         <h3 className={`${inter.className} ${styles.name}`}>{name}</h3>
         <h4 className={`${inter.className} ${styles.price}`}>R$ {price}</h4>
         <span className={`${inter.className} ${styles.colors}`}>
@@ -29,8 +29,10 @@ const Infos: React.FC<InfosProps> = ({
       </div>
 
       <div>
-        <CTA variant="primary" text="ENTRE EM CONTATO" />
-        <p className={`${inter.className} ${styles.description}`}>{description}</p>
+        <CTA variant="secondary" text="ENTRE EM CONTATO" />
+        <p className={`${inter.className} ${styles.description}`}>
+          {description}
+        </p>
       </div>
     </div>
   );
