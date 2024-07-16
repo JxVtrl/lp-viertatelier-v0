@@ -18,8 +18,6 @@ export interface Product {
 }
 
 function FestasViert({ products }: { products: any }) {
-  console.log(products);
-
   return (
     <div className="container mx-auto py-[137px] px-5 bg-white">
       <Head>

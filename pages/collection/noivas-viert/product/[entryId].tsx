@@ -18,7 +18,6 @@ const Product: React.FC = () => {
     if(!entryId || Array.isArray(entryId)) return
     const product = await getSingleEntry({ entryId })
     const treatedProduct = treatProduct(product as any)
-    console.log(treatedProduct)
     setName(treatedProduct.name)
   }
 
