@@ -37,7 +37,7 @@ interface Sys {
   environment: Environment;
   revision: number;
   contentType: ContentType;
-  locale: string;
+  locale: string | undefined;
 }
 
 interface FileDetailsImage {
