@@ -7,13 +7,11 @@ const Navigation: React.FC = () => {
     <nav>
       <ul className={styles.list}>
         {navigation_data.map((navigation) => (
-          <a
-            className="uppercase text-white"
-            href={navigation.url}
-            key={navigation.id}
-          >
-            {navigation.title}
-          </a>
+          <li key={navigation.id}>
+            <a className="uppercase text-white" href={navigation.url}>
+              {navigation.title}
+            </a>
+          </li>
         ))}
       </ul>
     </nav>

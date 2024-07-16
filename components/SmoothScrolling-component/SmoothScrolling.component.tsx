@@ -6,12 +6,10 @@ import { useLenis } from "@studio-freight/react-lenis";
 
 function SmoothScrolling({ children }: { children: React.ReactNode }) {
   const lenis = useLenis();
-  console.log("carreguei");
 
   useEffect(() => {
     const handleAnchorClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      console.log(target);
 
       if (
         target.tagName === "A" ||
@@ -21,9 +19,8 @@ function SmoothScrolling({ children }: { children: React.ReactNode }) {
         (target.tagName === "button" &&
           target.getAttribute("href")?.startsWith("#"))
       ) {
-        console.log("começa com #");
         event.preventDefault();
-        const id = target.getAttribute("href")!.substring(1);
+        const id = target.getAttribute("href")!.substring(1).replace("#","")
         const element = document.getElementById(id);
         if (element) {
           lenis?.scrollTo(element);
