@@ -26,12 +26,13 @@ const Content: React.FC<ContentProps> = ({ title = "Atelier Sob Medida" }) => {
       </div>
 
       {title === "Atelier Sob Medida" && (
-        <CTA text="Descubra" mxAuto onClick={() => 
-        {
-
-          // https://wa.me/5521974575663?text=Ol%C3%A1!%20Gostaria%20de%20descobrir%20mais%20sobre%20os%20vestidos%20de%20noiva%20e%20festa.
-        }
-        } />
+        <CTA
+          text="Descubra"
+          mxAuto
+          href={
+            "https://wa.me/5521974575663?text=Ol%C3%A1!%20Gostaria%20de%20descobrir%20mais%20sobre%20os%20vestidos%20de%20noiva%20e%20festa."
+          }
+        />
       )}
     </div>
   );

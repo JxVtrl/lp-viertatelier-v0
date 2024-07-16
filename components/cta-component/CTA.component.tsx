@@ -2,6 +2,7 @@ import React from "react";
 
 type CTAProps = {
   text?: string;
+  href?: string;
   onClick?: () => void;
   variant?: "primary" | "secondary";
   className?: string;
@@ -9,7 +10,8 @@ type CTAProps = {
 };
 
 const CTA: React.FC<CTAProps> = ({
-  onClick = () => null,
+  href = "",
+  onClick,
   text = "EU QUERO",
   variant = "primary",
   className,
@@ -19,24 +21,43 @@ const CTA: React.FC<CTAProps> = ({
 
   const secondaryVariant = "text-black border border-black";
 
-  return (
-    <button
-      className={`
-      ${variant === "primary" ? primaryVariant : secondaryVariant}
-      font-bold py-[1.48vh] md:py-[2.22vh] px-[3.33vw] rounded
-      transition duration-300 ease-in-out
+  if (href) {
+    return (
+      <a
+        className={`
+        ${variant === "primary" ? primaryVariant : secondaryVariant}
+        font-bold py-[1.48vh] md:py-[2.22vh] px-[3.33vw] rounded
+        transition duration-300 ease-in-out
       w-full
       max-w-[250px]
       md:max-w-[350px]
       ${mxAuto && "mx-auto"}
       uppercase
       ${className}
-    `}
+      `}
+        href={href}
+      >
+        <span className="text-wrap">{text}</span>
+      </a>
+    );
+  } else {
+    <button
+      className={`
+        ${variant === "primary" ? primaryVariant : secondaryVariant}
+        font-bold py-[1.48vh] md:py-[2.22vh] px-[3.33vw] rounded
+        transition duration-300 ease-in-out
+      w-full
+      max-w-[250px]
+      md:max-w-[350px]
+      ${mxAuto && "mx-auto"}
+      uppercase
+      ${className}
+      `}
       onClick={onClick}
     >
       <span className="text-wrap">{text}</span>
-    </button>
-  );
+    </button>;
+  }
 };
 
 export default CTA;

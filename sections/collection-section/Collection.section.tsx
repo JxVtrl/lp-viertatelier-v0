@@ -23,7 +23,10 @@ const Collection: React.FC = () => {
     mobile: (
       <>
         {/* ATELIER VIERT */}
-        <div className="h-fit  flex flex-col gap-[48px] pt-[10vh] pb-[7vh]" id='about'>
+        <div
+          className="h-fit  flex flex-col gap-[48px] pt-[10vh] pb-[7vh]"
+          id="about"
+        >
           <div className="grid  grid-cols-2 gap-[16px] px-[24px]">
             <div
               className="relative"
@@ -81,16 +84,17 @@ const Collection: React.FC = () => {
             </div>
             <CTA
               text={collections_data.atelier_viert.cta.text}
-              onClick={() => {
-                navigateTo(collections_data.atelier_viert.cta.link);
-              }}
+              href={collections_data.atelier_viert.cta.link}
               variant="secondary"
             />
           </div>
         </div>
 
         {/* NOIVAS VIERT */}
-        <div className="bg-[#EFEFE9] pb-[7vh] flex flex-col gap-[5vh]" id='collections'>
+        <div
+          className="bg-[#EFEFE9] pb-[7vh] flex flex-col gap-[5vh]"
+          id="collections"
+        >
           <div
             className="relative flex flex-col h-full w-full items-center justify-center"
             style={{
@@ -120,9 +124,7 @@ const Collection: React.FC = () => {
             </p>
             <CTA
               text={collections_data.noivas_viert.cta.text}
-              onClick={() => {
-                navigateTo(collections_data.noivas_viert.cta.link);
-              }}
+              onClick={() => navigateTo(collections_data.noivas_viert.cta.link)}
               variant="secondary"
             />
           </div>
@@ -165,9 +167,7 @@ const Collection: React.FC = () => {
               text={collections_data.festas_viert.cta.text}
               variant="secondary"
               className="w-full text-[12px] text-nowrap"
-              onClick={() => {
-                navigateTo(collections_data.festas_viert.cta.link);
-              }}
+              onClick={()=>navigateTo(collections_data.festas_viert.cta.link)}
             />
           </div>
           <div
@@ -235,10 +235,8 @@ const Collection: React.FC = () => {
             {collections_data.taylor.description}
           </p>
           <CTA
+            href={collections_data.taylor.cta.link}
             text={collections_data.taylor.cta.text}
-            onClick={() => {
-              navigateTo(collections_data.taylor.cta.link);
-            }}
             variant="secondary"
           />
           {/* LAST PHOTO BEFORE FOOTER */}
@@ -262,7 +260,7 @@ const Collection: React.FC = () => {
             paddingLeft: "18.2%",
             paddingRight: "18.2%",
           }}
-          id='about'
+          id="about"
         >
           <div
             className="w-full flex flex-col max-w-[50%]"
@@ -289,9 +287,7 @@ const Collection: React.FC = () => {
               text={collections_data.atelier_viert.cta.text}
               className="mt-[60px]"
               variant="secondary"
-              onClick={() => {
-                navigateTo(collections_data.atelier_viert.cta.link);
-              }}
+              href={collections_data.atelier_viert.cta.link}
             />
           </div>
           <div
@@ -327,7 +323,10 @@ const Collection: React.FC = () => {
         </div>
 
         {/* NOIVAS VIERT */}
-        <div className="flex bg-[#EFEFE9] mt-[20vh] h-[79.90vh]" id='collections'>
+        <div
+          className="flex bg-[#EFEFE9] mt-[20vh] h-[79.90vh]"
+          id="collections"
+        >
           <div
             style={{
               aspectRatio: 1.9,
@@ -428,9 +427,7 @@ const Collection: React.FC = () => {
             variant="secondary"
             className=""
             text={collections_data.taylor.cta.text}
-            onClick={() => {
-              navigateTo(collections_data.taylor.cta.link);
-            }}
+            href={collections_data.taylor.cta.link}
           />
         </div>
 
