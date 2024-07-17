@@ -97,6 +97,7 @@ export interface Product {
   sizes: ("P" | "PP" | "M" | "G" | "GG")[];
   colors: string[];
   images: string[];
+  entryId: string
 }
 
 export interface Products {
