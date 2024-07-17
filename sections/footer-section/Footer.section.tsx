@@ -78,7 +78,7 @@ const Footer: React.FC<FooterProps> = ({ insta }) => {
           className={`lg:w-full flex justify-between gap-[1.46vw] lg:justify-center mt-[7vh] md:mt-[120px]`}
         >
           <InstaFeed posts={insta} />
-          {footer_data.images.map((image, index) => (
+          {insta.map((image, index) => (
             <div
               key={index}
               className={`
@@ -89,8 +89,8 @@ const Footer: React.FC<FooterProps> = ({ insta }) => {
               style={{ aspectRatio: 0.868 }}
             >
               <Image
-                src={image.src}
-                alt={image.alt}
+                src={image.media_url}
+                alt={'instagram-image-'+index}
                 layout="fill"
                 className={`w-full h-full absolute object-cover bg-center`}
               />

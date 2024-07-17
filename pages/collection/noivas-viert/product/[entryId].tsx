@@ -50,7 +50,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      insta: data,
+      insta: data.data,
     },
     revalidate: 60 * 5, // 5 minutes
   };

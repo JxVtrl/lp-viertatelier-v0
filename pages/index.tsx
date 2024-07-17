@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
   const { data } = await axios.get(url);
   return {
     props: {
-      insta: data,
+      insta: data.data,
     },
     revalidate: 60 * 5, // 5 minutes
   };
