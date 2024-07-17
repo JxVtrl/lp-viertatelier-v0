@@ -11,7 +11,6 @@ import { collections_data } from "@/data/collections-data";
 const canelaFont = localFont({
   src: "../../styles/fonts/canela/Canela-Regular.woff2",
 });
-// import Canela font from Google Fonts
 
 const inter = Inter({
   subsets: ["latin"],
@@ -74,9 +73,10 @@ const Footer: React.FC<FooterProps> = ({ insta }) => {
         <div
           className={`lg:w-full flex justify-between gap-[1.46vw] lg:justify-center mt-[7vh] md:mt-[120px]`}
         >
-          {insta.slice(0,4).map((image, index) => (
+          {insta.slice(0, 4).map((image, index) => (
+            <Link href={image.permalink} key={index}>
             <div
-              key={index}
+              
               className={`
                 w-[23.43vw]
               lg:w-[17.19vw]
@@ -91,6 +91,7 @@ const Footer: React.FC<FooterProps> = ({ insta }) => {
                 className={`w-full h-full absolute object-cover bg-center`}
               />
             </div>
+            </Link>
           ))}
         </div>
         <div>

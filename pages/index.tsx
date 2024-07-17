@@ -16,6 +16,7 @@ export const getStaticProps = async () => {
   const fields = "media_url,media_type,permalink";
   const url = `https://graph.instagram.com/me/media?access_token=${token}&fields=${fields}`;
   const { data } = await axios.get(url);
+  console.log(data);
   return {
     props: {
       insta: data.data,
