@@ -29,16 +29,17 @@ function NoivasViert({
 }) {
   return (
     <Layout insta={insta}>
-      <div className="container mx-auto py-[137px] px-5 bg-white">
+      <div className="container mx-auto pt-[5.47vh] pb-[4.22vh] lg:pb-[12.69vh] px-[2.04vw] bg-white">
         <Head>
           <title>Noivas Viert</title>
           <meta name="description" content="Festas Viert" />
         </Head>
-        <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[w.41vw] gap-y-[4.17vh] lg:gap-y-[23.61vh]">
+        <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[2.14vw] gap-y-[4.17vh] lg:gap-y-[23.61vh]">
           {products.map((product: Product, index: number) => (
             <Link
               href={`/collection/noivas-viert/product/${product.entryId}`}
               key={index}
+              className="z-[999]"
             >
               <ProductCard
                 key={index}

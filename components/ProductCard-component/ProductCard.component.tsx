@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Inter } from "next/font/google";
 import { Product } from "@/pages/collection/festas-viert";
-
+import styles from './ProductCard.module.scss'
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -10,8 +10,8 @@ const inter = Inter({
 
 export default function ProductCard({ images, name, price, colors }: Product) {
   return (
-    <div className={`${inter.className} flex flex-col gap-5 `}>
-      <div className="relative w-full" style={{
+    <div className={`${inter.className} ${styles.container} flex flex-col gap-5 hover:color-white`}>
+      <div className="relative w-full z-[999]" style={{
         aspectRatio: 0.688
       }}>
         <Image
