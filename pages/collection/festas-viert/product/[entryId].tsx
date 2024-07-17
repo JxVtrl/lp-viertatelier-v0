@@ -35,9 +35,7 @@ const Product: React.FC<{
       <Head>
         <title>{name}</title>
       </Head>
-      <div>
-        <ProductShowcase entryId={entryId} />
-      </div>
+      <ProductShowcase entryId={entryId} />
     </Layout>
   );
 };
