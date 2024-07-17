@@ -77,7 +77,7 @@ const Footer: React.FC<FooterProps> = ({ insta }) => {
             <Link href={image.permalink} key={index}>
               <div
                 className={`
-                w-[46vw]
+                w-[45vw]
               lg:w-[17.19vw]
             relative
             `}
