@@ -71,26 +71,25 @@ const Footer: React.FC<FooterProps> = ({ insta }) => {
           </div>
         </div>
         <div
-          className={`lg:w-full flex justify-between gap-[1.46vw] lg:justify-center mt-[7vh] md:mt-[120px]`}
+          className={`lg:w-full flex flex-wrap justify-between gap-y-[2vh] lg:gap-[1.46vw] lg:justify-center mt-[7vh] md:mt-[120px] px-[2.04vw] lg:px-[unset]`}
         >
           {insta.slice(0, 4).map((image, index) => (
             <Link href={image.permalink} key={index}>
-            <div
-              
-              className={`
-                w-[23.43vw]
+              <div
+                className={`
+                w-[46vw]
               lg:w-[17.19vw]
             relative
             `}
-              style={{ aspectRatio: 0.868 }}
-            >
-              <Image
-                src={image.media_url}
-                alt={'instagram-image-'+index}
-                layout="fill"
-                className={`w-full h-full absolute object-cover bg-center`}
-              />
-            </div>
+                style={{ aspectRatio: 0.868 }}
+              >
+                <Image
+                  src={image.media_url}
+                  alt={"instagram-image-" + index}
+                  layout="fill"
+                  className={`w-full h-full absolute object-cover bg-center`}
+                />
+              </div>
             </Link>
           ))}
         </div>
@@ -142,7 +141,5 @@ const Footer: React.FC<FooterProps> = ({ insta }) => {
     </>
   );
 };
-
-
 
 export default Footer;
