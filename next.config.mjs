@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     domains: ["images.unsplash.com", "img.freepik.com", "images.ctfassets.net"],
   },
+  env: {
+    INSTA_TOKEN: process.env.INSTA_TOKEN
+  }
 };
 
 export default nextConfig;

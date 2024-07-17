@@ -7,6 +7,8 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { collections_data } from "@/data/collections-data";
+import { InstaFeed } from "@/components/instafeed-component";
+import axios from "axios";
 
 const canelaFont = localFont({
   src: "../../styles/fonts/canela/Canela-Regular.woff2",
@@ -18,7 +20,19 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
-const Footer: React.FC = () => {
+export interface InstaItem {
+  id: string;
+  media_type: "IMAGE" | "VIDEO";
+  media_url: string;
+  permalink: string;
+}
+
+export interface FooterProps {
+  insta: InstaItem[];
+}
+
+const Footer: React.FC<FooterProps> = ({ insta }) => {
+  console.log('insta', insta)
   const {
     device: { isMobile },
   } = useApp();
@@ -63,6 +77,7 @@ const Footer: React.FC = () => {
         <div
           className={`lg:w-full flex justify-between gap-[1.46vw] lg:justify-center mt-[7vh] md:mt-[120px]`}
         >
+          <InstaFeed posts={insta} />
           {footer_data.images.map((image, index) => (
             <div
               key={index}
@@ -130,5 +145,7 @@ const Footer: React.FC = () => {
     </>
   );
 };
+
+
 
 export default Footer;

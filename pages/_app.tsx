@@ -2,7 +2,6 @@ import MouseBlobity from "@/components/mouseblobity-component/MouseBlobity.compo
 import PageTransition from "@/components/pagetransition-component/PageTransitions.component";
 import { SmoothScrolling } from "@/components/SmoothScrolling-component";
 import { AppProvider } from "@/context/AppContext";
-import { Footer, Hero } from "@/sections";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
@@ -15,7 +14,7 @@ const montserrat = Montserrat({
 });
 const baskervville = Baskervville({ subsets: ["latin"], weight: ["400"] });
 
-export default function App({ Component, pageProps }: AppProps) {
+export function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -80,9 +79,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <main
               className={`${montserrat.className} ${baskervville.className}`}
             >
-              <Hero />
               <Component {...pageProps} />
-              <Footer />
               <MouseBlobity />
             </main>
           </SmoothScrolling>
@@ -91,3 +88,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+export default App;
