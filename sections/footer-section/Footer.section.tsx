@@ -78,7 +78,7 @@ const Footer: React.FC<FooterProps> = ({ insta }) => {
           className={`lg:w-full flex justify-between gap-[1.46vw] lg:justify-center mt-[7vh] md:mt-[120px]`}
         >
           <InstaFeed posts={insta} />
-          {insta.map((image, index) => (
+          {insta.slice(0,4).map((image, index) => (
             <div
               key={index}
               className={`
