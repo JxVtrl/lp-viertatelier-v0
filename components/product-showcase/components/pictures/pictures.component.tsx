@@ -6,8 +6,6 @@ type PicturesProps = {
 };
 
 const Pictures: React.FC<PicturesProps> = ({ images }) => {
-  console.log(images);
-
   return (
     <div className={styles.container}>
       <div className={styles.principal}>

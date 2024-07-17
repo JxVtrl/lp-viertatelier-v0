@@ -1,1 +1,0 @@
-export { default as InstaFeed } from './Instafeed.component'

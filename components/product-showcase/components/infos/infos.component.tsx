@@ -15,7 +15,6 @@ type InfosProps = {
 const Infos: React.FC<InfosProps> = ({
   infos: { colors, description, name, price, sizes },
 }) => {
-  console.log({ colors, description, name, price, sizes });
   return (
     <div
       className="lg:pt-[19.54vh] lg:pl-[5.99vw] px-[9.01vw] pt-[5vh] lg:px-[unset] lg:pt-[unset]
