@@ -5,15 +5,16 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { ProductShowcase } from "@/components/product-showcase";
-import { getSingleEntry } from "@/services/useContentfulData";
+import { getEntries, getSingleEntry } from "@/services/useContentfulData";
 import { treatProduct } from "@/utils/treatedData";
 import Layout from "@/layout/layout";
 import axios from "axios";
 import { InstaItem } from "@/sections/footer-section/Footer.section";
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 
-const Product: React.FC<{
-  insta: InstaItem[];
-}> = ({ insta }) => {
+const Product: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  insta,
+}) => {
   const [name, setName] = useState<string>("");
   const {
     query: { entryId },
@@ -40,7 +41,18 @@ const Product: React.FC<{
   );
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const entries = await getEntries({ contentType: 'produtos' }); // Você precisará implementar isso para buscar todos os IDs possíveis
+  const paths = entries.map((entry) => ({
+    params: { entryId: entry.sys.id }, // Certifique-se de que 'sys.id' é a estrutura correta do seu retorno
+  }));
+  return {
+    paths,
+    fallback: true,
+  };
+};
+
+export const getStaticProps = (async (context) => {
   const token = process.env.INSTA_TOKEN;
   const fields = "media_url,media_type,permalink";
   const url = `https://graph.instagram.com/me/media?access_token=${token}&fields=${fields}`;
@@ -52,6 +64,8 @@ export const getStaticPaths = async () => {
     },
     revalidate: 60 * 5, // 5 minutes
   };
-};
+}) satisfies GetStaticProps<{
+  insta: InstaItem[];
+}>;
 
 export default Product;
