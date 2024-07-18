@@ -73,7 +73,7 @@ const Footer: React.FC<FooterProps> = ({ insta }) => {
         <div
           className={`lg:w-full flex flex-wrap justify-between gap-y-[2vh] lg:gap-[1.46vw] lg:justify-center mt-[7vh] md:mt-[120px] px-[2.04vw] lg:px-[unset]`}
         >
-          {insta.slice(0, 4).map((image, index) => (
+          {insta?.slice(0, 4).map((image, index) => (
             <Link href={image.permalink} key={index}>
               <div
                 className={`
