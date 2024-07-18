@@ -42,9 +42,9 @@ const Product: React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const entries = await getEntries({ contentType: 'produtos' }); // Você precisará implementar isso para buscar todos os IDs possíveis
+  const entries = await getEntries({ contentType: 'produtos' });
   const paths = entries.map((entry) => ({
-    params: { entryId: entry.sys.id }, // Certifique-se de que 'sys.id' é a estrutura correta do seu retorno
+    params: { entryId: entry.sys.id },
   }));
   return {
     paths,
