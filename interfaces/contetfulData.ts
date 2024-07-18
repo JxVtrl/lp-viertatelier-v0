@@ -91,15 +91,14 @@ export interface EntryProps {
 
 export interface Product {
   collection: "Viert Festas" | "Viert Noivas";
-  name: string;
   description: string;
-  price: number;
   sizes: ("P" | "PP" | "M" | "G" | "GG")[];
-  colors: string[];
+  entryId: string;
   images: string[];
-  entryId: string
+  price: number;
+  name: string;
+  colors: string[];
 }
-
 export interface Products {
   products: Product[];
 }
