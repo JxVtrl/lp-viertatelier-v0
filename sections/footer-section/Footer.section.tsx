@@ -70,28 +70,30 @@ const Footer: React.FC<FooterProps> = ({ insta }) => {
             {footer_data.instaUsername}
           </div>
         </div>
-        <div
+        <ul
           className={`lg:w-full flex flex-wrap justify-between gap-y-[2vh] lg:gap-[1.46vw] lg:justify-center mt-[7vh] md:mt-[120px] px-[2.04vw] lg:px-[unset]`}
         >
           {insta
             ?.filter((item) => item.media_type !== "VIDEO")
             .slice(0, 4)
             .map((image, index) => (
-              <Link href={image.permalink} key={index}>
-                <div
-                  className={`w-[45vw] lg:w-[17.19vw] relative `}
-                  style={{ aspectRatio: 0.868 }}
-                >
-                  <Image
-                    src={image.media_url}
-                    alt={"instagram-image-" + index}
-                    layout="fill"
-                    className={`w-full h-full absolute object-cover bg-center`}
-                  />
-                </div>
-              </Link>
+              <li key={index}>
+                <Link href={image.permalink}>
+                  <div
+                    className={`w-[45vw] lg:w-[17.19vw] relative `}
+                    style={{ aspectRatio: 0.868 }}
+                  >
+                    <Image
+                      src={image.media_url}
+                      alt={"instagram-image-" + index}
+                      layout="fill"
+                      className={`w-full h-full absolute object-cover bg-center`}
+                    />
+                  </div>
+                </Link>
+              </li>
             ))}
-        </div>
+        </ul>
         <div>
           <ul
             className="
