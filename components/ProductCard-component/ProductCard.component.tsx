@@ -15,7 +15,8 @@ export default function ProductCard({
 }) {
   return (
     <div
-      className={`${inter.className} ${styles.container} flex flex-col gap-5`}
+      data-no-blobity
+      className={`${inter.className} ${styles.container} flex flex-col gap-5 `}
     >
       <div
         className="relative w-full z-[999]"

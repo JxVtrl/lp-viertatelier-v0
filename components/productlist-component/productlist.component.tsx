@@ -9,7 +9,7 @@ type ProductListProps = {
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <div className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[2.14vw] gap-y-[4.17vh] lg:gap-y-[5vh]">
+    <div  className="grid grid-cols-2 container mx-auto lg:grid-cols-3 gap-x-[2.14vw] gap-y-[4.17vh] lg:gap-y-[5vh]">
       {products.map((product: Product, index: number) => (
         <Link
           href={`/collection/noivas-viert/product/${product.entryId}`}

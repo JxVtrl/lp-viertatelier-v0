@@ -14,9 +14,9 @@ export const blobityConfig = {
   font: "'Montserrat', Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
   focusableElements:
     "[data-blobity], li:not([data-no-blobity]), a:not([data-no-blobity]), button:not([data-no-blobity]), [data-blobity-tooltip]",
-  opacity: 0.2,
+  opacity: 0.4,
   border: "1px solid #0e1016",
-  zIndex: 1,
+  zIndex: 100,
   size: 20,
   invert: false,
   magnetic: false,
