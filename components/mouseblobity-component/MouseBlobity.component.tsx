@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import useBlobity from "blobity/lib/react/useBlobity";
-//import useMediaQuery from "@/hooks/useMediaQuery";
 import AOS from "aos";
 export const blobityConfig = {
    licenseKey: "opensource",
