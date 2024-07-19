@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { Product } from "@/interfaces/contetfulData";
 import styles from "./ProductCard.module.scss";
+import getBase64 from "@/utils/getLocalBase64";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -13,6 +14,7 @@ export default function ProductCard({
 }: {
   product: Product;
 }) {
+  // const myBlurDataUrl = await getBase64(images[0]);
   return (
     <div
       data-no-blobity
@@ -29,6 +31,7 @@ export default function ProductCard({
           src={images[0]}
           alt="Product"
           className="object-cover bg-center"
+          // blurDataURL={myBlurDataUrl}
         />
       </div>
       <div className="flex flex-col items-start">

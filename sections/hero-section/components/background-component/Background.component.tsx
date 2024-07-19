@@ -4,12 +4,15 @@ import { background_data } from "@/data/background-data";
 import { getNextCollection } from "@/utils/getNextCollection";
 import gsap from "gsap";
 import Image from "next/image";
+import getBase64 from "@/utils/getLocalBase64";
 
 type BackgroundProps = {
   imagePos: "center" | "top";
 };
 
-const Background: React.FC<BackgroundProps> = ({ imagePos = "center" }) => {
+const Background: React.FC<BackgroundProps> = ({
+  imagePos = "center",
+}) => {
   const {
     device: { isDesktop },
     activeBackground: { collection, index: itemIndex },
@@ -56,6 +59,11 @@ const Background: React.FC<BackgroundProps> = ({ imagePos = "center" }) => {
     }
   }, [collection, itemIndex, isDesktop]);
 
+  // const myBlurDataUrl = await getBase64(
+  //   background_data[collection][isDesktop ? 0 : itemIndex].src
+  // );
+  // const myBlurDataUrl1 = await getBase64(background_data[collection][1].src);
+
   return (
     <div className="absolute inset-0 w-full h-full z-[-1] bg-black">
       <div
@@ -70,6 +78,7 @@ const Background: React.FC<BackgroundProps> = ({ imagePos = "center" }) => {
             layout="fill"
             style={{ objectFit: "cover", objectPosition: imagePos }}
             loading="eager"
+            // blurDataURL={myBlurDataUrl}
           />
         </div>
 
@@ -84,6 +93,7 @@ const Background: React.FC<BackgroundProps> = ({ imagePos = "center" }) => {
               layout="fill"
               style={{ objectFit: "cover", objectPosition: imagePos }}
               loading="eager"
+              // blurDataURL={myBlurDataUrl1}
             />
           </div>
         )}

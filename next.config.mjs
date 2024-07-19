@@ -3,13 +3,27 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
-      "images.unsplash.com",
-      "img.freepik.com",
-      "images.ctfassets.net",
-      "scontent-gig4-1.cdninstagram.com",
-      "scontent-iad3-1.cdninstagram.com",
-      "scontent-iad3-2.cdninstagram.com",
-      "scontent.cdninstagram.com",
+      {
+        hostname: "images.unsplash.com",
+      },
+      {
+        hostname: "img.freepik.com",
+      },
+      {
+        hostname: "images.ctfassets.net",
+      },
+      {
+        hostname: "scontent-gig4-1.cdninstagram.com",
+      },
+      {
+        hostname: "scontent-iad3-1.cdninstagram.com",
+      },
+      {
+        hostname: "scontent-iad3-2.cdninstagram.com",
+      },
+      {
+        hostname: "scontent.cdninstagram.com",
+      },
     ],
   },
   env: {
