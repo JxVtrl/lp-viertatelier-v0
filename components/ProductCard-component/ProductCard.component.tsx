@@ -15,6 +15,7 @@ export default function ProductCard({
 }) {
   return (
     <div
+      data-no-blobity
       className={`${inter.className} ${styles.container} flex flex-col gap-5 hover:color-white`}
     >
       <div
