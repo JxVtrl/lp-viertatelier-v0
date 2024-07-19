@@ -1,7 +1,10 @@
 .container {
   display: flex;
   justify-content: flex-end;
-  padding: 0 9.01vw;
+
+  @media (max-width: 1024px) {
+    padding: 0 9.01vw;
+  }
 }
 
 .principal {
