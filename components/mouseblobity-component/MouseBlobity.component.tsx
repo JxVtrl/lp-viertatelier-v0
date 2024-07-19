@@ -21,8 +21,7 @@ export const blobityConfig = {
    border: "1px solid #0e1016",
    zIndex: -1,
    size: 20,
-   // radius: 20,
-   magnetic: true, // default is true
+   magnetic: false, 
 };
 
 export default function MouseBlobity() {
