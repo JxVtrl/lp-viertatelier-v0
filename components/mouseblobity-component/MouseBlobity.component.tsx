@@ -2,27 +2,20 @@
 
 import { useEffect } from "react";
 import useBlobity from "blobity/lib/react/useBlobity";
-//import useMediaQuery from "@/hooks/useMediaQuery";
 import AOS from "aos";
 export const blobityConfig = {
    licenseKey: "opensource",
-   focusableElementsOffsetX: 5,
-   focusableElementsOffsetY: 5,
+   focusableElementsOffsetX: 15,
+   focusableElementsOffsetY: 15,
    dotColor: "#fff",
-   color: "#fff",
-   invert: false,
    focusableElements:
-      "[data-blobity], li:not([data-no-blobity]), a:not([data-no-blobity]), button:not([data-no-blobity]), [data-blobity-tooltip]",
-   font: "'Montserrat','Source Sans Pro',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif",
-   fontSize: 16,
-   fontWeight: 500,
-   opacity: 1,
-   fontColor: "#fff",
+   "[data-blobity], li:not([data-no-blobity]), a:not([data-no-blobity]), button:not([data-no-blobity]), [data-blobity-tooltip]",
+   opacity: 0.2,
    border: "1px solid #0e1016",
-   zIndex: -1,
+   zIndex: 999,
    size: 20,
-   // radius: 20,
-   magnetic: true, // default is true
+   invert: false,
+   magnetic: false, 
 };
 
 export default function MouseBlobity() {
