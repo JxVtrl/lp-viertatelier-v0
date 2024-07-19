@@ -4,6 +4,7 @@ import { FooterProps } from "@/sections/footer-section/Footer.section";
 import axios from "axios";
 
 export function Home({ insta }: FooterProps) {
+  console.log('insta', insta)
   return (
     <Layout insta={insta}>
       <Collection />
