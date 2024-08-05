@@ -78,7 +78,7 @@ interface Fields {
   name: string;
   description: string;
   price: number;
-  sizes: string[];
+  sizes: number[];
   colors: string[];
   images: Image[];
 }
@@ -92,7 +92,7 @@ export interface EntryProps {
 export interface Product {
   collection: "Viert Festas" | "Viert Noivas";
   description: string;
-  sizes: ("P" | "PP" | "M" | "G" | "GG")[];
+  sizes: (34 | 36 | 38 | 40 | 42 | 44 | 46)[];
   entryId: string;
   images: string[];
   price: number;
