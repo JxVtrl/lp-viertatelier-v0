@@ -17,8 +17,8 @@ type InfosProps = {
 const Infos: React.FC<InfosProps> = ({
   infos: { colors, description, name, price, sizes },
 }) => {
-  const [colorSelected, setColorSelected] = React.useState(colors[0]);
-  const [sizeSelected, setSizeSelected] = React.useState(sizes[0]);
+  const [colorSelected, setColorSelected] = React.useState<string | null>(null);
+  const [sizeSelected, setSizeSelected] = React.useState<number | null>(null);
 
   function formatTableString(description: string) {
     const lines = description.trim().split("\n");
@@ -106,19 +106,23 @@ const Infos: React.FC<InfosProps> = ({
         </p>
 
         <div className={styles.sizes}>
-          {sizes.map((size, index) => {
-            return (
-              <button
-                key={index}
-                className={`${size === sizeSelected ? styles.selected : ""} ${
-                  styles.size
-                }`}
-                onClick={() => setSizeSelected(size)}
-              >
-                <span className="capitalize">{size}</span>
-              </button>
-            );
-          })}
+          {!sizes ? (
+            <p className={`${inter.className} ${styles.size}`}>Tamanho único</p>
+          ) : (
+            sizes.map((size, index) => {
+              return (
+                <button
+                  key={index}
+                  className={`${size === sizeSelected ? styles.selected : ""} ${
+                    styles.size
+                  }`}
+                  onClick={() => setSizeSelected(size)}
+                >
+                  <span className="capitalize">{size}</span>
+                </button>
+              );
+            })
+          )}
         </div>
       </div>
 
