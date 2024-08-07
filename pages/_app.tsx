@@ -51,7 +51,7 @@ export function App({ Component, pageProps }: AppProps) {
         <meta property="og:url" content="https://viertatelier.com" />
         <meta
           property="og:image"
-          content="https://viertatelier.com/favicon.ico"
+          content="https://viertatelier.com/og.jpg"
         />
         <meta property="og:site_name" content="Viert Atelier" />
         <meta property="og:locale" content="pt_BR" />
@@ -62,7 +62,7 @@ export function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:description" content="" />
         <meta
           name="twitter:image"
-          content="https://viertatelier.com/favicon.ico"
+          content="https://viertatelier.com/og.jpg"
         />
         <meta name="twitter:site" content="@viertatelier" />
         <meta name="twitter:creator" content="@viertatelier" />
