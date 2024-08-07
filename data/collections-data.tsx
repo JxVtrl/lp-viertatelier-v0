@@ -16,7 +16,7 @@ export const collections_data = {
     ],
     cta: {
       text: "Saiba Mais",
-      link: "https://wa.me/5521974575663?text=Ol%C3%A1!%20Poderia%20me%20contar%20mais%20sobre%20os%20vestidos%20de%20noiva%20e%20festa%3F%20Estou%20interessada!",
+      link: "#collections",
     },
   },
   noivas_viert: {
