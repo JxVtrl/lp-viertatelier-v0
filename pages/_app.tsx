@@ -31,7 +31,8 @@ export function App({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
 
         {/* description */}
-        <meta name="description" content="Em breve um novo site" />
+        <meta name="description" content="Viert Atelier é um atelier de moda especializado em vestidos de noiva, festa e sob medida." />
+
         <title>Viert Atelier</title>
 
         {/* keywords */}
