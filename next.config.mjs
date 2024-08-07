@@ -24,6 +24,9 @@ const nextConfig = {
       {
         hostname: "scontent.cdninstagram.com",
       },
+      {
+      hostname: 'scontent-gig4-2.cdninstagram.com'
+    }
     ],
   },
   env: {

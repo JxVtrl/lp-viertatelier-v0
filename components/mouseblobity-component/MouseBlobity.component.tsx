@@ -7,9 +7,9 @@ export const blobityConfig = {
   licenseKey: "opensource",
   focusableElementsOffsetX: 15,
   focusableElementsOffsetY: 15,
-  dotColor: "#000",
+  dotColor: "#fff",
   color: "#000",
-  fontColor: "#000",
+  fontColor: "#fff",
   fontWeight: 500,
   font: "'Montserrat', Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
   focusableElements:

@@ -91,7 +91,7 @@ export interface EntryProps {
 
 export interface Product {
   collection: "Viert Festas" | "Viert Noivas";
-  description: string;
+  description: any;
   sizes: (34 | 36 | 38 | 40 | 42 | 44 | 46)[];
   entryId: string;
   images: string[];

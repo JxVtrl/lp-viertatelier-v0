@@ -18,7 +18,7 @@ const CTA: React.FC<CTAProps> = ({
   mxAuto = false,
 }) => {
   const primaryVariant = "text-white border border-white ";
-  const secondaryVariant = "text-black border border-black";
+  const secondaryVariant = "text-black border border-black hover:text-white hover:bg-black";
 
   const container_className = `
         ${variant === "primary" ? primaryVariant : secondaryVariant}
