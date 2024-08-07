@@ -25,8 +25,11 @@ const nextConfig = {
         hostname: "scontent.cdninstagram.com",
       },
       {
-      hostname: 'scontent-gig4-2.cdninstagram.com'
-    }
+        hostname: "scontent-gig4-2.cdninstagram.com",
+      },
+      {
+        hostname: "downloads.ctfassets.net",
+      },
     ],
   },
   env: {

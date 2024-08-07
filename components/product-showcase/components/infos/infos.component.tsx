@@ -61,9 +61,14 @@ const Infos: React.FC<InfosProps> = ({
       <div className="mb-[3.75vh] lg:mb-[8.7vh]">
         <h3 className={`${inter.className} ${styles.name}`}>{name}</h3>
         <p className={`${inter.className} ${styles.price}`}>R$ {price}</p>
-        <span className={`${inter.className} ${styles.colors}`}>
-          <small>{colors?.length + 1} cores</small>
-        </span>
+
+        <p className={`text-[14px] ${inter.className} ${styles.colors}`}>
+          {colors.map((color) => (
+            <span key={color} className="capitalize">
+              {color}
+            </span>
+          ))}
+        </p>
 
         <div className={styles.sizes}>
           {sizes.map((size, index) => {

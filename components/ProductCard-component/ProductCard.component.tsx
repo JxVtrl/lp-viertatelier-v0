@@ -38,7 +38,8 @@ export default function ProductCard({
         <h3 className={"uppercase"}>{name}</h3>
         <p className="text-lg font-bold">R$ {price}</p>
         <p className={`text-[14px]`}>
-          {colors.toString().split(",").length} cores
+          {colors.toString().split(",").length}{" "}
+          {colors.length === 1 ? "cor" : "cores"}
         </p>
       </div>
     </div>

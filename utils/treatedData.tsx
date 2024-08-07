@@ -24,7 +24,7 @@ export const treatProducts = (allProducts: EntryProps[]): Product[] => {
       name: entry.fields.name,
       description: entry.fields.description,
       price: entry.fields.price,
-      sizes: entry.fields.sizes as (34 | 36 | 38 | 40 | 42 | 44 | 46)[],
+      sizes: entry.fields.sizes as (34 | 36 | 38 | 40 | 42 | 44 | 46)[] ?? [],
       colors: entry.fields.colors,
       images: entry.fields.images!.map(
         (image) => "https:" + image.fields.file.url
