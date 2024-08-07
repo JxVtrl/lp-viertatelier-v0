@@ -17,7 +17,8 @@ type InfosProps = {
 const Infos: React.FC<InfosProps> = ({
   infos: { colors, description, name, price, sizes },
 }) => {
-  console.log(description);
+  const [colorSelected, setColorSelected] = React.useState(colors[0]);
+  const [sizeSelected, setSizeSelected] = React.useState(sizes[0]);
 
   function formatTableString(description: string) {
     const lines = description.trim().split("\n");
@@ -53,6 +54,23 @@ const Infos: React.FC<InfosProps> = ({
   // Verifica se a descrição contém a tabela e a formata
   const formattedDescription = formatTableString(description);
 
+  function handleSendToWpp() {
+    let message = `Olá! Gostaria de saber mais sobre o produto ${name}`;
+
+    if (colorSelected && sizeSelected) {
+      message += ` na cor ${colorSelected} e tamanho ${sizeSelected}`;
+    } else if (colorSelected) {
+      message += ` na cor ${colorSelected}`;
+    } else if (sizeSelected) {
+      message += ` no tamanho ${sizeSelected}`;
+    }
+
+    const url = `https://api.whatsapp.com/send?phone=5521974575663&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  }
+
   return (
     <div
       className="lg:pt-[19.54vh] lg:pl-[5.99vw] px-[9.01vw] pt-[5vh] lg:px-[unset] lg:pt-[unset]
@@ -64,7 +82,15 @@ const Infos: React.FC<InfosProps> = ({
 
         <p className={`text-[14px] ${inter.className} ${styles.colors}`}>
           {colors.map((color) => (
-            <span key={color} className="capitalize">
+            <span
+              key={color}
+              className="capitalize"
+              style={{
+                color: color === colorSelected ? "var(--primary)" : "black",
+                cursor: "pointer",
+              }}
+              onClick={() => setColorSelected(color)}
+            >
               {color}
             </span>
           ))}
@@ -72,13 +98,27 @@ const Infos: React.FC<InfosProps> = ({
 
         <div className={styles.sizes}>
           {sizes.map((size, index) => {
-            return <div key={index}>{size}</div>;
+            return (
+              <div
+                key={index}
+                className={`${size === sizeSelected ? styles.selected : ""} ${
+                  styles.size
+                }`}
+                onClick={() => setSizeSelected(size)}
+              >
+                {size}
+              </div>
+            );
           })}
         </div>
       </div>
 
       <div>
-        <CTA variant="secondary" text="ENTRE EM CONTATO" />
+        <CTA
+          variant="secondary"
+          text="ENTRE EM CONTATO"
+          onClick={handleSendToWpp}
+        />
         <div
           className={`${inter.className} ${styles.description}`}
           dangerouslySetInnerHTML={{ __html: formattedDescription }}
