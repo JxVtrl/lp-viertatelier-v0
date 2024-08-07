@@ -81,33 +81,42 @@ const Infos: React.FC<InfosProps> = ({
         <p className={`${inter.className} ${styles.price}`}>R$ {price}</p>
 
         <p className={`text-[14px] ${inter.className} ${styles.colors}`}>
-          {colors.map((color) => (
-            <span
-              key={color}
-              className="capitalize"
-              style={{
-                color: color === colorSelected ? "var(--primary)" : "black",
-                cursor: "pointer",
-              }}
-              onClick={() => setColorSelected(color)}
-            >
-              {color}
-            </span>
-          ))}
+          {colors.map((color) => {
+            if (color === "Cores Sob Consulta")
+              return (
+                <span key={color} className="capitalize">
+                  {color}
+                </span>
+              );
+
+            return (
+              <button
+                key={color}
+                onClick={() => setColorSelected(color)}
+                style={{
+                  backgroundColor: color,
+                  border:
+                    color === colorSelected ? "1px solid var(--primary)" : "",
+                }}
+              >
+                <span className="capitalize">{color}</span>
+              </button>
+            );
+          })}
         </p>
 
         <div className={styles.sizes}>
           {sizes.map((size, index) => {
             return (
-              <div
+              <button
                 key={index}
                 className={`${size === sizeSelected ? styles.selected : ""} ${
                   styles.size
                 }`}
                 onClick={() => setSizeSelected(size)}
               >
-                {size}
-              </div>
+                <span className="capitalize">{size}</span>
+              </button>
             );
           })}
         </div>

@@ -29,9 +29,26 @@
   font-weight: 400;
   font-size: calc(12px + (20 - 12) * ((100vw - 1024px) / (1920 - 1024)));
   letter-spacing: 10%;
+  margin-top: 1vh;
 
   @media (max-width: 1024px) {
     font-size: 12px;
+  }
+
+  > button {
+    width: 2.6vw;
+    aspect-ratio: 1;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.3s, color 0.3s;
+
+    @media (max-width: 1024px) {
+      width: 4.63vw;
+      font-size: 12px;
+    }
   }
 }
 
@@ -46,7 +63,7 @@
   gap: 1vw;
 
   }
-  > div {
+  > button {
     width: 2.6vw;
     aspect-ratio: 1;
     border: 1px solid black;
@@ -54,10 +71,17 @@
     align-items: center;
     justify-content: center;
 
+    transition: background-color 0.3s, color 0.3s;
+
     @media (max-width: 1024px) {
       width: 4.63vw;
       font-size: 12px;
     }
+  }
+
+  .selected {
+    background-color: black;
+    color: white;
   }
 }
 
