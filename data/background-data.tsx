@@ -1,5 +1,5 @@
 const IMAGES_PREFIX = "/assets/backgrounds";
-const IMAGES_SUFIX = ".jpg";
+const IMAGES_SUFIX = ".webp";
 
 export const background_data = {
   black: [

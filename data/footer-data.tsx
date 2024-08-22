@@ -4,22 +4,22 @@ export const footer_data = {
   images: [
     {
       id: 0,
-      src: "/assets/images/first-footer-image.png",
+      src: "/assets/images/first-footer-image.webp",
       alt: "Instagram 1",
     },
     {
       id: 1,
-      src: "/assets/images/second-image-footer.png",
+      src: "/assets/images/second-image-footer.webp",
       alt: "Instagram 2",
     },
     {
       id: 2,
-      src: "/assets/images/third-footer-image.png",
+      src: "/assets/images/third-footer-image.webp",
       alt: "Instagram 3",
     },
     {
       id: 3,
-      src: "/assets/images/last-footer-photo.png",
+      src: "/assets/images/last-footer-photo.webp",
       alt: "Instagram 4",
     },
   ],
