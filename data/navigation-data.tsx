@@ -1,17 +1,35 @@
-export const navigation_data = [
-    {
+type NavigationDataProps = {
+  id: number;
+  title: string;
+  url?: string;
+  submenu?: NavigationDataProps[];
+};
+
+export const navigation_data: NavigationDataProps[] = [
+  {
+    id: 0,
+    title: "Quem somos",
+    url: "#about",
+  },
+  {
+    id: 1,
+    title: "Coleções",
+    submenu: [
+      {
         id: 0,
-        title: 'Quem somos',
-        url: '#about'
-    },
-    {
+        title: "Noivas Viert",
+        url: "/#noivas-viert",
+      },
+      {
         id: 1,
-        title: 'Coleções',
-        url: '#collections'
-    },
-    {
-        id: 2,
-        title: 'Contato',
-        url: '#contact'
-    },
-]
+        title: "Festas Viert",
+        url: "/#festas-viert",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Contato",
+    url: "#contact",
+  },
+];

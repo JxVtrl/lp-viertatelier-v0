@@ -93,7 +93,7 @@ const Collection: React.FC = () => {
         {/* NOIVAS VIERT */}
         <div
           className="bg-[#EFEFE9] pb-[7vh] flex flex-col gap-[5vh]"
-          id="collections"
+          id="noivas-viert"
         >
           <div
             className="relative flex flex-col h-full w-full items-center justify-center"
@@ -132,6 +132,7 @@ const Collection: React.FC = () => {
 
         {/* FESTAS VIERT */}
         <div
+          id="festas-viert"
           className="
           grid 
           grid-cols-2
@@ -167,7 +168,7 @@ const Collection: React.FC = () => {
               text={collections_data.festas_viert.cta.text}
               variant="secondary"
               className="w-full text-[12px] text-nowrap"
-              onClick={()=>navigateTo(collections_data.festas_viert.cta.link)}
+              onClick={() => navigateTo(collections_data.festas_viert.cta.link)}
             />
           </div>
           <div
